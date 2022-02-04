@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        *{margin: 0;padding: 0;}
+    </style>
+</head>
+<body>
+    <h1>Buttons, Links</h1>
+    <hr>
+    <br>
+    <h2>Primary CTA</h2>
+    <a href="#" class="btn-primary">
+        <span>
+            Enabled
+            <i class="fas fa-arrow-right"></i>
+        </span>
+    </a>
+    <a href="#" class="btn-primary btn-primary--disabled">
+        Disabled
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    <br>
+    <br>
+    <h2>Secondary CTA</h2>
+    <div class="secondary-bg">
+        <a href="#" class="btn-secondary">
+            <span>
+                Enabled
+                <i class="fas fa-arrow-right"></i>
+            </span>
+        </a>
+        <button class="btn-secondary btn-secondary--disabled">
+            Disabled
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+    <br>
+    <br>
+
+
+    <a href="#" class="link-primary">
+        Enabled
+        <i class="fas fa-arrow-right link-primary__arrow"></i>
+    </a>
+    <a href="#" class="link-primary link-primary--disabled">
+        Disabled
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    <div class="secondary-bg">
+        <a href="#" class="link-secondary">
+            Enabled
+            <i class="fas fa-arrow-right link-secondary__arrow"></i>
+        </a>
+        <a href="#" class="link-secondary link-secondary--disabled">
+            Disabled
+            <i class="fas fa-arrow-right link-secondary__arrow"></i>
+        </a>
+    </div>
+
+    <a href="#" class="arrow-primary">
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    <a href="#" class="arrow-primary arrow-primary--disabled">
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    <div class="secondary-bg">
+        <a href="#" class="arrow-secondary">
+            <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#" class="arrow-secondary arrow-secondary--disabled">
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <h2>Pagination</h2>
+    <div class="pagination">
+        <button class="pagination__button pagination__button--disabled pagination__button--first">
+            <i class="fas fa-angle-double-left"></i>
+        </button>
+        <button class="pagination__button pagination__button--disabled pagination__button--prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="pagination__button pagination__button--selected">1</button>
+        <button class="pagination__button">2</button>
+        <button class="pagination__button">3</button>
+        <button class="pagination__button pagination__button--ellipsis">
+            <i class="fas fa-ellipsis-h"></i>
+        </button>
+        <button class="pagination__button pagination__button--next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="pagination__button  pagination__button--last">
+            <i class="fas fa-angle-double-right"></i>
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+.btn-primary {
+  display: inline-block;
+  position: relative;
+  background-color: $primary;
+  color: $white;
+  padding: 1.4rem 2.4rem;
+  border: none;
+  text-decoration: none;
+  span {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $primary-dark;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.2s;
+  }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+  &--disabled {
+    background-color: $gray-disbaled;
+    cursor: default;
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-block;
+  background-color: $primary-dark;
+  color: $white;
+  padding: 1.4rem 2.4rem;
+  border: 0.1rem solid $white;
+  text-decoration: none;
+  span {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    transform: scaleX(0);
+    transition: 0.2s transform;
+    transform-origin: left;
+  }
+  &:hover:not(.btn-secondary--disabled) {
+    color: $primary-dark;
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+  &--disabled {
+    border: 0.1rem solid $gray-light;
+    color: $gray-light;
+    cursor: default;
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.link-primary {
+  color: $primary-dark;
+  text-decoration: none;
+  &__arrow {
+    margin-left: 0.2rem;
+    transition: 0.2s;
+  }
+  &:hover:not(.link-primary--disabled) {
+    .link-primary__arrow {
+      transform: translateX(-0.2rem);
+    }
+  }
+  &--disabled {
+    color: $gray-light;
+    cursor: default;
+  }
+}
+
+.link-secondary {
+  color: $white;
+  text-decoration: none;
+  &__arrow {
+    margin-left: 0.2rem;
+    transition: 0.2s;
+  }
+  &:hover:not(.link-secondary--disabled) {
+    .link-secondary__arrow {
+      transform: translateX(-0.2rem);
+    }
+  }
+  &--disabled {
+    color: $gray-light;
+    cursor: default;
+  }
+}
+
+.arrow-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: $primary;
+  border-radius: 50%;
+  transition: 0.2s;
+  text-decoration: none;
+  color: $white;
+  &:hover:not(.arrow-primary--disabled) {
+    background-color: $primary-dark;
+  }
+  &--disabled {
+    background-color: $gray-disbaled;
+    cursor: default;
+  }
+}
+
+.arrow-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: $white;
+  color: $primary-dark;
+  border-radius: 50%;
+  transition: 0.2s;
+  text-decoration: none;
+  &:hover:not(.arrow-secondary--disabled) {
+    color: $primary;
+  }
+  &--disabled {
+    color: $gray-light;
+    cursor: default;
+  }
+}
+
+.pagination {
+  &__button {
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 1px solid $gray;
+    color: $gray;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover:not(.pagination__button--disabled):not(.pagination__button--selected):not(.pagination__button--ellipsis) {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+    &--disabled {
+      border: 1px solid $gray-disbaled;
+      color: $gray-disbaled;
+      cursor: default;
+    }
+    &--selected {
+      border: 1px solid $primary;
+      background-color: $primary;
+      color: $white;
+      cursor: default;
+    }
+    &--next,
+    &--last {
+      color: $primary;
+    }
+    &--ellipsis {
+      border: none;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
