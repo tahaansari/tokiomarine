@@ -1,3 +1,9 @@
+.header {
+  background-color: $primary-dark;
+  color: $white;
+  padding: 2rem;
+}
+
 .color-box {
   margin: 1rem;
   &__flex {
@@ -11,8 +17,8 @@
     &--gray {
       background-color: $gray;
     }
-    &--gray-light {
-      background-color: $gray-light;
+    &--disabled {
+      background-color: $disabled;
     }
     &--white {
       background-color: $white;

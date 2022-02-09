@@ -1,13 +1,9 @@
-@import "colors";
-@import "media";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-primary, sans-serif;
   font-size: 100%;
 }
 
@@ -83,10 +79,4 @@ h4 {
   @include gt-sm {
     font-size: 2.4rem;
   }
-}
-
-.typescale-heading {
-  background-color: $primary-dark;
-  color: $white;
-  padding: 2rem;
 }

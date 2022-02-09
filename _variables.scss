@@ -3,6 +3,7 @@ $primary-dark: #003366;
 $primary-light: #009ce5;
 
 $secondary: #bc2b86;
+$secondary-dark: #70226b;
 $secondary-light: #e83278;
 
 $primary-alternate: #f8ac3a;
@@ -14,13 +15,16 @@ $secondary-alternate-light: #afca0b;
 
 $gray: #4a4948;
 $gray-light: #706f6f;
-$gray-disbaled: #c1c1c1;
+$disabled: #cccccc;
+$disabled-light: #f0f0f0;
 $white: #ffffff;
 $black: #000000;
 
-// $primary-tint: #f0f0f0;
-// $primary-tint: #f7fcfe;
-// $primary-tint: #f5f9fd;
-// $primary-tint: #f3faf5;
-// $primary-tint: #f9f4f9;
-// $primary-tint: #fef5f8;
+$primary-tint: #f7fcfe;
+$primary-tint-dark: #f5f9fd;
+$secondary-tint: #f9f4f9;
+$secondary-tint-light: #fef5f8;
+$secondary-alternate-tint: #f3faf5;
+
+$font-primary: "Avenir-Book";
+$font-secondary: "Avenir-Medium";
