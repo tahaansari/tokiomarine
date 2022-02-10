@@ -3,21 +3,25 @@
   width: 3.2rem;
   height: 2rem;
   background: url(../images/sprite.svg) no-repeat -21.1rem -0.73rem;
-  // &--disabled {
-  //   background: url(../images/sprite.svg) no-repeat center/contain;
-  // }
-  // &--disabled-light {
-  //   background: url(../images/sprite.svg) no-repeat center/contain;
-  // }
-  // &--primary {
-  //   background: url(../images/sprite.svg) no-repeat center/contain;
-  // }
-  // &--primary {
-  //   background: url(../images/sprite.svg) no-repeat center/contain;
-  // }
-  // &--primary-dark {
-  //   background: url(../images/sprite.svg) no-repeat center/contain;
-  // }
+  &--disabled {
+    background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
+  }
+  &--disabled-light {
+    background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
+  }
+  &--primary {
+    background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
+  }
+  &--primary-dark {
+    background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
+  }
+}
+
+.prev {
+  display: inline-block;
+  width: 1rem;
+  height: 1.8rem;
+  background: url(../images/sprite.svg) no-repeat -1rem -24.4rem;
 }
 
 .btn-primary {
@@ -95,7 +99,7 @@
   }
   &:hover:not(.btn-secondary--disabled) {
     .right-arrow {
-      background: url(../images/sprite.svg) no-repeat center/contain;
+      background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
     }
     color: $primary-dark;
     &::before {
@@ -204,7 +208,7 @@
   }
   &:hover:not(.btn-rounded-secondary--disabled) {
     .btn-rounded-secondary__arrow {
-      background: url(../images/sprite.svg) no-repeat center/contain;
+      background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
     }
   }
   &--disabled {
