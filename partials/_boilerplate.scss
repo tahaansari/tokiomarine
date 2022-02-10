@@ -1,22 +1,22 @@
 .right-arrow {
   display: inline-block;
-  width: 3.6rem;
-  height: 1.787rem;
-  background: url(../images/sprite.png) no-repeat -2.11rem -0.846rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -21.1rem -0.73rem;
   // &--disabled {
-  //   background: url(../images/sprite.png) no-repeat center/contain;
+  //   background: url(../images/sprite.svg) no-repeat center/contain;
   // }
   // &--disabled-light {
-  //   background: url(../images/sprite.png) no-repeat center/contain;
+  //   background: url(../images/sprite.svg) no-repeat center/contain;
   // }
   // &--primary {
-  //   background: url(../images/sprite.png) no-repeat center/contain;
+  //   background: url(../images/sprite.svg) no-repeat center/contain;
   // }
   // &--primary {
-  //   background: url(../images/sprite.png) no-repeat center/contain;
+  //   background: url(../images/sprite.svg) no-repeat center/contain;
   // }
   // &--primary-dark {
-  //   background: url(../images/sprite.png) no-repeat center/contain;
+  //   background: url(../images/sprite.svg) no-repeat center/contain;
   // }
 }
 
@@ -95,7 +95,7 @@
   }
   &:hover:not(.btn-secondary--disabled) {
     .right-arrow {
-      background: url(../images/sprite.png) no-repeat center/contain;
+      background: url(../images/sprite.svg) no-repeat center/contain;
     }
     color: $primary-dark;
     &::before {
@@ -204,7 +204,7 @@
   }
   &:hover:not(.btn-rounded-secondary--disabled) {
     .btn-rounded-secondary__arrow {
-      background: url(../images/sprite.png) no-repeat center/contain;
+      background: url(../images/sprite.svg) no-repeat center/contain;
     }
   }
   &--disabled {
@@ -258,27 +258,27 @@
       &:before {
         content: "";
         width: 2rem;
-        background: url(../images/sprite.png) left/contain;
+        background: url(../images/sprite.svg) left/contain;
       }
     }
     &--prev {
       &:before {
         content: "";
         width: 1.8rem;
-        background: url(../images/sprite.png) no-repeat center/contain;
+        background: url(../images/sprite.svg) no-repeat center/contain;
       }
     }
     &--next {
       &:before {
         content: "";
-        background: url(../images/sprite.png) no-repeat center/contain;
+        background: url(../images/sprite.svg) no-repeat center/contain;
       }
     }
     &--last {
       &:before {
         content: "";
         width: 2rem;
-        background: url(../images/sprite.png) left/contain;
+        background: url(../images/sprite.svg) left/contain;
       }
     }
     &--ellipsis {
@@ -287,12 +287,12 @@
         content: "";
         width: 3rem;
         height: 3rem;
-        background: url(../images/sprite.png) no-repeat center/contain;
+        background: url(../images/sprite.svg) no-repeat center/contain;
       }
       &:hover {
         &:before {
           content: "";
-          background: url(../images/sprite.png) no-repeat center/contain;
+          background: url(../images/sprite.svg) no-repeat center/contain;
         }
       }
     }

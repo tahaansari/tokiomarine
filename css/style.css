@@ -693,9 +693,9 @@ h4 {
 
 .right-arrow {
   display: inline-block;
-  width: 3.6rem;
-  height: 1.787rem;
-  background: url(../images/sprite.png) no-repeat -2.11rem -0.846rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -21.1rem -0.73rem;
 }
 
 .btn-primary {
@@ -799,7 +799,7 @@ h4 {
 }
 
 .btn-secondary:hover:not(.btn-secondary--disabled) .right-arrow {
-  background: url(../images/sprite.png) no-repeat center/contain;
+  background: url(../images/sprite.svg) no-repeat center/contain;
 }
 
 .btn-secondary:hover:not(.btn-secondary--disabled)::before {
@@ -935,7 +935,7 @@ h4 {
 }
 
 .btn-rounded-secondary:hover:not(.btn-rounded-secondary--disabled) .btn-rounded-secondary__arrow {
-  background: url(../images/sprite.png) no-repeat center/contain;
+  background: url(../images/sprite.svg) no-repeat center/contain;
 }
 
 .btn-rounded-secondary--disabled {
@@ -996,24 +996,24 @@ h4 {
 .pagination__button--first:before {
   content: "";
   width: 2rem;
-  background: url(../images/sprite.png) left/contain;
+  background: url(../images/sprite.svg) left/contain;
 }
 
 .pagination__button--prev:before {
   content: "";
   width: 1.8rem;
-  background: url(../images/sprite.png) no-repeat center/contain;
+  background: url(../images/sprite.svg) no-repeat center/contain;
 }
 
 .pagination__button--next:before {
   content: "";
-  background: url(../images/sprite.png) no-repeat center/contain;
+  background: url(../images/sprite.svg) no-repeat center/contain;
 }
 
 .pagination__button--last:before {
   content: "";
   width: 2rem;
-  background: url(../images/sprite.png) left/contain;
+  background: url(../images/sprite.svg) left/contain;
 }
 
 .pagination__button--ellipsis {
@@ -1024,12 +1024,12 @@ h4 {
   content: "";
   width: 3rem;
   height: 3rem;
-  background: url(../images/sprite.png) no-repeat center/contain;
+  background: url(../images/sprite.svg) no-repeat center/contain;
 }
 
 .pagination__button--ellipsis:hover:before {
   content: "";
-  background: url(../images/sprite.png) no-repeat center/contain;
+  background: url(../images/sprite.svg) no-repeat center/contain;
 }
 
 .page-anchor {
