@@ -478,7 +478,7 @@ table {
 
 @font-face {
   font-family: "Avenir-Book";
-  src: url("./AvenirLTStd-Book.woff2") format("woff2"), url("./AvenirLTStd-Book.woff") format("woff");
+  src: url("../fonts/AvenirLTStd-Book.woff2") format("woff2"), url("../fonts/AvenirLTStd-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -486,7 +486,7 @@ table {
 
 @font-face {
   font-family: "Avenir-Medium";
-  src: url("./Avenir-Medium.woff2") format("woff2"), url("./Avenir-Medium.woff") format("woff");
+  src: url("../fonts/Avenir-Medium.woff2") format("woff2"), url("../fonts/Avenir-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -693,29 +693,9 @@ h4 {
 
 .right-arrow {
   display: inline-block;
-  width: 3rem;
-  height: 1.8rem;
-  background: url(./images/right-arrow.svg) no-repeat center/contain;
-}
-
-.right-arrow--disabled {
-  background: url(./images/right-arrow-disabled.svg) no-repeat center/contain;
-}
-
-.right-arrow--disabled-light {
-  background: url(./images/right-arrow-disabled-light.svg) no-repeat center/contain;
-}
-
-.right-arrow--primary {
-  background: url(./images/right-arrow-primary.svg) no-repeat center/contain;
-}
-
-.right-arrow--primary {
-  background: url(./images/right-arrow-primary-light.svg) no-repeat center/contain;
-}
-
-.right-arrow--primary-dark {
-  background: url(./images/right-arrow-primary-dark.svg) no-repeat center/contain;
+  width: 3.6rem;
+  height: 1.787rem;
+  background: url(../images/sprite.png) no-repeat -2.11rem -0.846rem;
 }
 
 .btn-primary {
@@ -819,7 +799,7 @@ h4 {
 }
 
 .btn-secondary:hover:not(.btn-secondary--disabled) .right-arrow {
-  background: url(./images/right-arrow-primary-dark.svg) no-repeat center/contain;
+  background: url(../images/sprite.png) no-repeat center/contain;
 }
 
 .btn-secondary:hover:not(.btn-secondary--disabled)::before {
@@ -955,7 +935,7 @@ h4 {
 }
 
 .btn-rounded-secondary:hover:not(.btn-rounded-secondary--disabled) .btn-rounded-secondary__arrow {
-  background: url(./images/right-arrow-primary-light.svg) no-repeat center/contain;
+  background: url(../images/sprite.png) no-repeat center/contain;
 }
 
 .btn-rounded-secondary--disabled {
@@ -1016,24 +996,24 @@ h4 {
 .pagination__button--first:before {
   content: "";
   width: 2rem;
-  background: url(./images/prev.svg) left/contain;
+  background: url(../images/sprite.png) left/contain;
 }
 
 .pagination__button--prev:before {
   content: "";
   width: 1.8rem;
-  background: url(./images/prev.svg) no-repeat center/contain;
+  background: url(../images/sprite.png) no-repeat center/contain;
 }
 
 .pagination__button--next:before {
   content: "";
-  background: url(./images/next.svg) no-repeat center/contain;
+  background: url(../images/sprite.png) no-repeat center/contain;
 }
 
 .pagination__button--last:before {
   content: "";
   width: 2rem;
-  background: url(./images/next.svg) left/contain;
+  background: url(../images/sprite.png) left/contain;
 }
 
 .pagination__button--ellipsis {
@@ -1044,12 +1024,12 @@ h4 {
   content: "";
   width: 3rem;
   height: 3rem;
-  background: url(./images/ellipsis.svg) no-repeat center/contain;
+  background: url(../images/sprite.png) no-repeat center/contain;
 }
 
 .pagination__button--ellipsis:hover:before {
   content: "";
-  background: url(./images/ellipsis-primary.svg) no-repeat center/contain;
+  background: url(../images/sprite.png) no-repeat center/contain;
 }
 
 .page-anchor {

@@ -1,23 +1,23 @@
 .right-arrow {
   display: inline-block;
-  width: 3rem;
-  height: 1.8rem;
-  background: url(./images/right-arrow.svg) no-repeat center/contain;
-  &--disabled {
-    background: url(./images/right-arrow-disabled.svg) no-repeat center/contain;
-  }
-  &--disabled-light {
-    background: url(./images/right-arrow-disabled-light.svg) no-repeat center/contain;
-  }
-  &--primary {
-    background: url(./images/right-arrow-primary.svg) no-repeat center/contain;
-  }
-  &--primary {
-    background: url(./images/right-arrow-primary-light.svg) no-repeat center/contain;
-  }
-  &--primary-dark {
-    background: url(./images/right-arrow-primary-dark.svg) no-repeat center/contain;
-  }
+  width: 3.6rem;
+  height: 1.787rem;
+  background: url(../images/sprite.png) no-repeat -2.11rem -0.846rem;
+  // &--disabled {
+  //   background: url(../images/sprite.png) no-repeat center/contain;
+  // }
+  // &--disabled-light {
+  //   background: url(../images/sprite.png) no-repeat center/contain;
+  // }
+  // &--primary {
+  //   background: url(../images/sprite.png) no-repeat center/contain;
+  // }
+  // &--primary {
+  //   background: url(../images/sprite.png) no-repeat center/contain;
+  // }
+  // &--primary-dark {
+  //   background: url(../images/sprite.png) no-repeat center/contain;
+  // }
 }
 
 .btn-primary {
@@ -95,7 +95,7 @@
   }
   &:hover:not(.btn-secondary--disabled) {
     .right-arrow {
-      background: url(./images/right-arrow-primary-dark.svg) no-repeat center/contain;
+      background: url(../images/sprite.png) no-repeat center/contain;
     }
     color: $primary-dark;
     &::before {
@@ -204,7 +204,7 @@
   }
   &:hover:not(.btn-rounded-secondary--disabled) {
     .btn-rounded-secondary__arrow {
-      background: url(./images/right-arrow-primary-light.svg) no-repeat center/contain;
+      background: url(../images/sprite.png) no-repeat center/contain;
     }
   }
   &--disabled {
@@ -258,27 +258,27 @@
       &:before {
         content: "";
         width: 2rem;
-        background: url(./images/prev.svg) left/contain;
+        background: url(../images/sprite.png) left/contain;
       }
     }
     &--prev {
       &:before {
         content: "";
         width: 1.8rem;
-        background: url(./images/prev.svg) no-repeat center/contain;
+        background: url(../images/sprite.png) no-repeat center/contain;
       }
     }
     &--next {
       &:before {
         content: "";
-        background: url(./images/next.svg) no-repeat center/contain;
+        background: url(../images/sprite.png) no-repeat center/contain;
       }
     }
     &--last {
       &:before {
         content: "";
         width: 2rem;
-        background: url(./images/next.svg) left/contain;
+        background: url(../images/sprite.png) left/contain;
       }
     }
     &--ellipsis {
@@ -287,12 +287,12 @@
         content: "";
         width: 3rem;
         height: 3rem;
-        background: url(./images/ellipsis.svg) no-repeat center/contain;
+        background: url(../images/sprite.png) no-repeat center/contain;
       }
       &:hover {
         &:before {
           content: "";
-          background: url(./images/ellipsis-primary.svg) no-repeat center/contain;
+          background: url(../images/sprite.png) no-repeat center/contain;
         }
       }
     }
