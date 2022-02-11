@@ -714,13 +714,6 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
 }
 
-.prev {
-  display: inline-block;
-  width: 1rem;
-  height: 1.8rem;
-  background: url(../images/sprite.svg) no-repeat -1rem -24.4rem;
-}
-
 .btn-primary {
   font-family: "Avenir-Medium";
   font-weight: 500;
@@ -977,8 +970,8 @@ h4 {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 2.1rem;
-  cursor: pointer;
   margin: 0.4rem;
+  cursor: pointer;
 }
 
 .pagination__button:hover:not(.pagination__button--disabled):not(.pagination__button--selected):not(.pagination__button--ellipsis) {
@@ -1001,58 +994,42 @@ h4 {
   cursor: default;
 }
 
-.pagination__button--ico {
-  position: relative;
-}
-
-.pagination__button--ico:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-.pagination__button--first:before {
-  content: "";
-  width: 2rem;
-  background: url(../images/sprite.svg) left/contain;
-}
-
-.pagination__button--prev:before {
-  content: "";
-  width: 1.8rem;
-  background: url(../images/sprite.svg) no-repeat center/contain;
-}
-
-.pagination__button--next:before {
-  content: "";
-  background: url(../images/sprite.svg) no-repeat center/contain;
-}
-
-.pagination__button--last:before {
-  content: "";
-  width: 2rem;
-  background: url(../images/sprite.svg) left/contain;
-}
-
 .pagination__button--ellipsis {
   border: none;
 }
 
-.pagination__button--ellipsis:before {
-  content: "";
-  width: 3rem;
-  height: 3rem;
-  background: url(../images/sprite.svg) no-repeat center/contain;
+.pagination__button--ellipsis:hover .pagination__icon--ellipsis {
+  background: url(../images/sprite.svg) no-repeat -0.3rem -3.15rem;
 }
 
-.pagination__button--ellipsis:hover:before {
-  content: "";
-  background: url(../images/sprite.svg) no-repeat center/contain;
+.pagination__icon {
+  display: inline-block;
+  height: 2.1rem;
+}
+
+.pagination__icon--first {
+  width: 2.4rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -24.3rem;
+}
+
+.pagination__icon--prev {
+  width: 1.2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -24.3rem;
+}
+
+.pagination__icon--next {
+  width: 1.2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -27.15rem;
+}
+
+.pagination__icon--last {
+  width: 2.4rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -27.15rem;
+}
+
+.pagination__icon--ellipsis {
+  width: 2.4rem;
+  background: url(../images/sprite.svg) no-repeat -3.6rem -3.15rem;
 }
 
 .page-anchor {
