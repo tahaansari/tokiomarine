@@ -1056,49 +1056,89 @@ h4 {
   background-color: #f7fcfe;
 }
 
-.page-anchor__link--products:hover .page-anchor__icon--products {
-  background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+.page-anchor__link--products.page-anchor__link--active .page-anchor__icon--products {
+  background: url(../images/sprite.svg) no-repeat -0.7rem -19.9rem;
 }
 
-.page-anchor__link--resources:hover .page-anchor__icon--resources {
-  background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+.page-anchor__link--resources.page-anchor__link--active .page-anchor__icon--resources {
+  background: url(../images/sprite.svg) no-repeat -0.7rem -6.3rem;
 }
 
-.page-anchor__link--contacts:hover .page-anchor__icon--contacts {
-  background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+.page-anchor__link--contacts.page-anchor__link--active .page-anchor__icon--contacts {
+  background: url(../images/sprite.svg) no-repeat -0.7rem -11.1rem;
 }
 
-.page-anchor__link--portal:hover .page-anchor__icon--portal {
-  background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+.page-anchor__link--portal.page-anchor__link--active .page-anchor__icon--portal {
+  background: url(../images/sprite.svg) no-repeat -0.7rem -15.5rem;
 }
 
 .page-anchor__icon {
   display: block;
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .page-anchor__icon--products {
-  width: 3rem;
-  height: 3rem;
-  background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+  background: url(../images/sprite.svg) no-repeat -5.2rem -19.9rem;
 }
 
 .page-anchor__icon--resources {
-  width: 3rem;
-  height: 3.5rem;
   background: url(../images/sprite.svg) no-repeat -3.25em -6.25rem;
 }
 
 .page-anchor__icon--contacts {
-  width: 3rem;
-  height: 3rem;
-  background: url(../images/sprite.svg) no-repeat -3.2em -11.1rem;
+  background: url(../images/sprite.svg) no-repeat -5.2rem -11.1rem;
 }
 
 .page-anchor__icon--portal {
-  width: 3.4rem;
-  height: 3.4rem;
-  background: url(../images/sprite.svg) no-repeat -3.2em -15.5rem;
+  background: url(../images/sprite.svg) no-repeat -5.2rem -15.5rem;
+}
+
+input[type="text"] {
+  border: 2px solid #afbdcf;
+  border-radius: 5px;
+  height: 47px;
+  width: 300px;
+  color: #000000;
+  font-size: 14px;
+  padding-left: 20px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+input:focus + label,
+input:valid + label {
+  font-size: 12px;
+  color: #afbdcf;
+  top: -5px;
+  left: 10px;
+  background: #ffffff;
+  padding: 0px 5px 0px 5px;
+}
+
+.input_wrap {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.input_wrap label {
+  font-family: arial;
+  font-size: 16px;
+  color: #afbdcf;
+  padding: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
