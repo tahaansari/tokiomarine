@@ -292,12 +292,58 @@
     &:hover:not(.page-anchor__link--active) {
       background-color: $primary-tint;
     }
+    &--products {
+      &:hover {
+        .page-anchor__icon--products {
+          background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+        }
+      }
+    }
+    &--resources {
+      &:hover {
+        .page-anchor__icon--resources {
+          background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+        }
+      }
+    }
+    &--contacts {
+      &:hover {
+        .page-anchor__icon--contacts {
+          background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+        }
+      }
+    }
+    &--portal {
+      &:hover {
+        .page-anchor__icon--portal {
+          background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+        }
+      }
+    }
   }
   &__icon {
     display: block;
     margin: auto;
-    width: 2.8rem;
-    height: 2.8rem;
     margin-bottom: 1rem;
+    &--products {
+      width: 3rem;
+      height: 3rem;
+      background: url(../images/sprite.svg) no-repeat -3.2em -19.9rem;
+    }
+    &--resources {
+      width: 3rem;
+      height: 3.5rem;
+      background: url(../images/sprite.svg) no-repeat -3.25em -6.25rem;
+    }
+    &--contacts {
+      width: 3rem;
+      height: 3rem;
+      background: url(../images/sprite.svg) no-repeat -3.2em -11.1rem;
+    }
+    &--portal {
+      width: 3.4rem;
+      height: 3.4rem;
+      background: url(../images/sprite.svg) no-repeat -3.2em -15.5rem;
+    }
   }
 }
