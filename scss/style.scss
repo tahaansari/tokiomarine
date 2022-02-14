@@ -6,3 +6,7 @@
 @import "../partials/typography";
 @import "../partials/temp";
 @import "../partials/boilerplate";
+
+* {
+  box-sizing: border-box;
+}
