@@ -492,6 +492,11 @@ table {
   font-display: swap;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -499,6 +504,7 @@ html {
 body {
   font-family: "Avenir-Book", sans-serif;
   font-size: 100%;
+  color: #4a4948;
 }
 
 .heading-large {
@@ -631,15 +637,14 @@ h4 {
   display: inline-block;
   width: 100px;
   height: 100px;
+}
+
+.color-box__item--gray1 {
   background-color: #4a4948;
 }
 
-.color-box__item--gray {
-  background-color: #4a4948;
-}
-
-.color-box__item--disabled {
-  background-color: #cccccc;
+.color-box__item--gray2 {
+  background-color: #706f6f;
 }
 
 .color-box__item--white {
@@ -864,7 +869,7 @@ h4 {
 }
 
 .link-primary--disabled {
-  color: #cccccc;
+  color: #706f6f;
   cursor: default;
 }
 
@@ -1034,7 +1039,7 @@ h4 {
 
 .page-anchor {
   margin: 2rem;
-  border: 0.1rem solid #cccccc;
+  border: 0.1rem solid #706f6f;
   display: inline-block;
   font-size: 1.6rem;
   color: #4a4948;
@@ -1098,6 +1103,7 @@ h4 {
 
 .input-field {
   position: relative;
+  display: inline-block;
 }
 
 .input-field__input {
@@ -1112,13 +1118,13 @@ h4 {
 }
 
 .input-field__input:focus {
+  border: 0.1rem solid #0066cc;
   outline: none;
 }
 
-.input-field__input:focus + label,
-.input-field__input:valid + label {
+.input-field__input:focus + .input-field__label,
+.input-field__input:valid + .input-field__label {
   font-size: 1.4rem;
-  color: #afbdcf;
   top: 0;
   left: 1rem;
   background: #ffffff;
@@ -1127,7 +1133,6 @@ h4 {
 
 .input-field__label {
   font-size: 1.6rem;
-  color: #afbdcf;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1136,10 +1141,6 @@ h4 {
   -webkit-transition: 0.2s ease all;
   transition: 0.2s ease all;
   pointer-events: none;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  color: #706f6f;
 }
 /*# sourceMappingURL=style.css.map */

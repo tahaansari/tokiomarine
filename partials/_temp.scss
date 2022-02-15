@@ -13,12 +13,11 @@
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: #4a4948;
-    &--gray {
+    &--gray1 {
       background-color: $gray;
     }
-    &--disabled {
-      background-color: $disabled;
+    &--gray2 {
+      background-color: $gray-light;
     }
     &--white {
       background-color: $white;
