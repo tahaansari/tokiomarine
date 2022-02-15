@@ -1108,6 +1108,7 @@ h4 {
 
 .input-field__input {
   border: 0.1rem solid #f0f0f0;
+  color: #4a4948;
   border-radius: 0;
   padding: 2.4rem 2rem;
   width: 30rem;
@@ -1131,6 +1132,20 @@ h4 {
   padding: 0 0.5rem 0 0.5rem;
 }
 
+.input-field__input--error {
+  border: 0.1rem solid #cd0029;
+}
+
+.input-field__input--error:focus {
+  border: 0.1rem solid #cd0029;
+  outline: none;
+}
+
+.input-field__input--disabled {
+  border: 0.1rem solid #e5e5e5;
+  background-color: transparent;
+}
+
 .input-field__label {
   font-size: 1.6rem;
   position: absolute;
@@ -1142,5 +1157,80 @@ h4 {
   transition: 0.2s ease all;
   pointer-events: none;
   color: #706f6f;
+}
+
+.input-field__label--disabled {
+  color: #e5e5e5;
+}
+
+.input-field__error {
+  position: absolute;
+  top: 100%;
+  left: 0rem;
+  color: #cd0029;
+  margin-top: 0.8rem;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=style.css.map */
