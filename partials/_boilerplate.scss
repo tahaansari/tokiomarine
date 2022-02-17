@@ -13,7 +13,7 @@
     background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
   }
   &--primary-dark {
-    background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
+    background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
   }
 }
 
@@ -193,6 +193,8 @@
   border-radius: 50%;
   transition: 0.2s;
   text-decoration: none;
+  border-color: transparent;
+  cursor: pointer;
   &__arrow {
     position: absolute;
     top: 50%;
@@ -201,7 +203,7 @@
   }
   &:hover:not(.btn-rounded-secondary--disabled) {
     .btn-rounded-secondary__arrow {
-      background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
+      background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
     }
   }
   &--disabled {
@@ -440,50 +442,82 @@
   font-family: Arial;
 }
 
+.custom-select {
+  &--disabled {
+    .select-selected {
+      border: 0.1rem solid $disabled;
+      color: $disabled;
+      pointer-events: none;
+      cursor: default;
+      &:after {
+        content: "";
+        background: url(../images/sprite.svg) no-repeat -39px -272px;
+      }
+    }
+  }
+}
+
 .custom-select select {
   display: none; /*hide original SELECT element: */
 }
 
 .select-selected {
-  background-color: DodgerBlue;
+  // background-color: DodgerBlue;
+  border: 1px solid $gray-tint;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    width: 1.2rem;
+    height: 2.2rem;
+    transition: 0.2s;
+    background: url(../images/sprite.svg) no-repeat -20px -271px;
+    transform: translateY(-50%) rotate(90deg) scale(0.6);
+  }
 }
 
 /* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
+// .select-selected:after {
+//   position: absolute;
+//   content: "";
+//   top: 14px;
+//   right: 10px;
+//   width: 0;
+//   height: 0;
+//   border: 6px solid transparent;
+//   border-color: #fff transparent transparent transparent;
+// }
 
 /* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active {
+  border: 0.1rem solid $primary-light;
+  border-bottom: 0;
+}
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+  // border-color: transparent transparent #fff transparent;
+  // top: 7px;
+  transform: translateY(-50%) rotate(-90deg) scale(0.6);
 }
 
 /* style the items (options), including the selected item: */
 .select-items div,
 .select-selected {
-  color: #ffffff;
+  // color: #ffffff;
   padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: DodgerBlue;
+  background-color: $white;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
+  border: 0.1rem solid $primary-light;
+  border-top: 0;
 }
 
 /* Hide the items when the select box is closed: */
@@ -493,5 +527,117 @@
 
 .select-items div:hover,
 .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: $primary-tint-dark;
 }
+
+.card {
+  position: relative;
+  display: inline-block;
+  color: $white;
+  padding: 2.4rem;
+  width: 30rem;
+  height: 42.2rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $primary-dark);
+  }
+  &:hover {
+    box-shadow: 5px 6px 15px $gray-tint;
+    .card__img {
+      transform: scale(1.1);
+    }
+    .btn-rounded-secondary__arrow {
+      background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+    }
+  }
+  &--product {
+    padding: 5rem 2.4rem 3rem;
+    background-color: $primary;
+    flex-direction: column;
+    justify-content: space-between;
+    &:after {
+      content: none;
+    }
+  }
+  &--service {
+    padding: 5rem 2.4rem 3rem;
+    background-color: $primary-dark;
+    flex-direction: column;
+    justify-content: space-between;
+    &:after {
+      content: none;
+    }
+  }
+  &--featured-article {
+    padding: 5rem 2.4rem 3rem;
+    .card__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &--article {
+    background-color: $secondary;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+    transform: scale(1);
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__btn {
+    float: right;
+  }
+}
+
+// .card {
+//   position: relative;
+//   background-color: $primary;
+//   color: $white;
+//   padding: 5rem 2.4rem 3rem;
+//   width: 30rem;
+//   height: 42.2rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   &--service {
+//     background-color: $primary-dark;
+//   }
+//   &:hover {
+//     .btn-rounded-secondary__arrow {
+//       background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+//     }
+//   }
+//   &__bottom {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+// }

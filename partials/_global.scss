@@ -10,4 +10,12 @@ body {
   font-family: $font-primary, sans-serif;
   font-size: 100%;
   color: $gray;
+  margin: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }

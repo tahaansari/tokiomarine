@@ -505,6 +505,14 @@ body {
   font-family: "Avenir-Book", sans-serif;
   font-size: 100%;
   color: #4a4948;
+  margin: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .heading-large {
@@ -716,7 +724,7 @@ h4 {
 }
 
 .right-arrow--primary-dark {
-  background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
+  background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
 }
 
 .btn-primary {
@@ -945,6 +953,8 @@ h4 {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   text-decoration: none;
+  border-color: transparent;
+  cursor: pointer;
 }
 
 .btn-rounded-secondary__arrow {
@@ -956,7 +966,7 @@ h4 {
 }
 
 .btn-rounded-secondary:hover:not(.btn-rounded-secondary--disabled) .btn-rounded-secondary__arrow {
-  background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
+  background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
 }
 
 .btn-rounded-secondary--disabled {
@@ -1177,51 +1187,70 @@ h4 {
   font-family: Arial;
 }
 
+.custom-select--disabled .select-selected {
+  border: 0.1rem solid #e5e5e5;
+  color: #e5e5e5;
+  pointer-events: none;
+  cursor: default;
+}
+
+.custom-select--disabled .select-selected:after {
+  content: "";
+  background: url(../images/sprite.svg) no-repeat -39px -272px;
+}
+
 .custom-select select {
   display: none;
   /*hide original SELECT element: */
 }
 
 .select-selected {
-  background-color: DodgerBlue;
+  border: 1px solid #f0f0f0;
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  width: 1.2rem;
+  height: 2.2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: url(../images/sprite.svg) no-repeat -20px -271px;
+  -webkit-transform: translateY(-50%) rotate(90deg) scale(0.6);
+          transform: translateY(-50%) rotate(90deg) scale(0.6);
 }
 
 /* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active {
+  border: 0.1rem solid #009ce5;
+  border-bottom: 0;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+  -webkit-transform: translateY(-50%) rotate(-90deg) scale(0.6);
+          transform: translateY(-50%) rotate(-90deg) scale(0.6);
 }
 
 /* style the items (options), including the selected item: */
 .select-items div,
 .select-selected {
-  color: #ffffff;
   padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: DodgerBlue;
+  background-color: #ffffff;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
+  border: 0.1rem solid #009ce5;
+  border-top: 0;
 }
 
 /* Hide the items when the select box is closed: */
@@ -1231,6 +1260,142 @@ h4 {
 
 .select-items div:hover,
 .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f5f9fd;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  padding: 2.4rem;
+  width: 30rem;
+  height: 42.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#003366));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #003366);
+}
+
+.card:hover {
+  -webkit-box-shadow: 5px 6px 15px #f0f0f0;
+          box-shadow: 5px 6px 15px #f0f0f0;
+}
+
+.card:hover .card__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card:hover .btn-rounded-secondary__arrow {
+  background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+}
+
+.card--product {
+  padding: 5rem 2.4rem 3rem;
+  background-color: #0066cc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card--product:after {
+  content: none;
+}
+
+.card--service {
+  padding: 5rem 2.4rem 3rem;
+  background-color: #003366;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card--service:after {
+  content: none;
+}
+
+.card--featured-article {
+  padding: 5rem 2.4rem 3rem;
+}
+
+.card--featured-article .card__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card--article {
+  background-color: #bc2b86;
+}
+
+.card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.card__bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__title {
+  margin-bottom: 1rem;
+}
+
+.card__btn {
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
