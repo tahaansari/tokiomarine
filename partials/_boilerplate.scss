@@ -32,7 +32,6 @@
   color: $white;
   padding: 2rem 2.4rem;
   border: none;
-  text-decoration: none;
   padding-right: 7rem;
   span {
     position: relative;
@@ -76,7 +75,6 @@
   color: $white;
   padding: 2rem 2.4rem;
   border: none;
-  text-decoration: none;
   padding-right: 7rem;
   pointer-events: none;
   &::after {
@@ -91,7 +89,31 @@
   }
 }
 
-.btn-secondary {
+.btn-disabled-transparent {
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: $gray-light;
+  padding: 2rem 2.4rem;
+  border: 0.2rem solid $gray-light;
+  padding-right: 7rem;
+  pointer-events: none;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 3.2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
+  }
+}
+
+.btn-primary-dark {
   position: relative;
   display: inline-block;
   background-color: $primary-dark;
@@ -99,14 +121,9 @@
   font-size: 1.8rem;
   padding: 2rem 2.4rem;
   border: 0.2rem solid $white;
-  text-decoration: none;
-  &__arrow {
-    margin-left: 2rem;
-  }
-  &__text {
+  padding-right: 7rem;
+  span {
     position: relative;
-    display: flex;
-    align-items: center;
   }
   &::before {
     content: "";
@@ -119,25 +136,36 @@
     transform: scaleX(0);
     transform-origin: left;
   }
-  &:hover:not(.btn-secondary--disabled) {
-    .right-arrow {
-      background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 3.2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
+  }
+  &:hover {
     color: $primary-dark;
     &::before {
-      transition: 0.5s;
+      transition: 0.4s;
       transform: scaleX(1);
     }
-  }
-  &--disabled {
-    border: 0.2rem solid $gray-light;
-    color: $gray-light;
-    cursor: default;
-    &::before {
-      content: none;
+    &::after {
+      background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
     }
   }
 }
+
+// &--disabled {
+//   border: 0.2rem solid $gray-light;
+//   color: $gray-light;
+//   cursor: default;
+//   &::before {
+//     content: none;
+//   }
+// }
 
 .btn-rounded-primary {
   position: relative;
@@ -146,7 +174,6 @@
   height: 6.8rem;
   border-radius: 50%;
   transition: 0.2s;
-  text-decoration: none;
   background-color: $primary;
   padding: 0;
   border: none;
@@ -173,7 +200,6 @@
   height: 6.8rem;
   border-radius: 50%;
   transition: 0.2s;
-  text-decoration: none;
   background-color: $disabled;
   padding: 0;
   border: none;
@@ -197,7 +223,6 @@
   height: 6.8rem;
   border-radius: 50%;
   transition: 0.2s;
-  text-decoration: none;
   background-color: $white;
   padding: 0;
   border: none;
@@ -226,52 +251,66 @@
   background: url(../images/sprite.svg) no-repeat -8rem -32rem;
 }
 
-.link-primary {
-  font-size: 1.8rem;
+.link-primary-dark {
+  position: relative;
   display: inline-block;
-  color: $primary-dark;
-  text-decoration: none;
   font-size: 1.8rem;
-  &__text {
-    display: flex;
-    align-items: center;
-  }
-  &__arrow {
-    margin-left: 1rem;
+  color: $primary-dark;
+  font-size: 1.8rem;
+  padding-right: 7rem;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    width: 3.2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
     transition: 0.2s;
   }
-  &:hover:not(.link-primary--disabled) {
-    .link-primary__arrow {
-      transform: translateX(-0.5rem);
+  &:hover {
+    &:after {
+      right: 3rem;
     }
-  }
-  &--disabled {
-    color: $gray-light;
-    cursor: default;
   }
 }
 
-.link-secondary {
+.link-disabled {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: $disabled;
+  padding-right: 7rem;
+  pointer-events: none;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    width: 3.2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
+    transition: 0.2s;
+  }
+}
+
+.link-white {
+  position: relative;
   display: inline-block;
   font-size: 1.8rem;
   color: $white;
-  text-decoration: none;
-  &__text {
-    display: flex;
-    align-items: center;
-  }
-  &__arrow {
-    margin-left: 1rem;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    width: 3.2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
     transition: 0.2s;
-  }
-  &:hover:not(.link-secondary--disabled) {
-    .link-secondary__arrow {
-      transform: translateX(-0.5rem);
-    }
-  }
-  &--disabled {
-    color: $gray-light;
-    cursor: default;
   }
 }
 
@@ -283,7 +322,6 @@
   background-color: $primary;
   border-radius: 50%;
   transition: 0.2s;
-  text-decoration: none;
   color: $white;
   &:hover:not(.btn-rounded--disabled) {
     background-color: $primary-dark;
@@ -308,7 +346,6 @@
 //   background-color: $gray-tint;
 //   border-radius: 50%;
 //   transition: 0.2s;
-//   text-decoration: none;
 //   border-color: transparent;
 //   cursor: pointer;
 //   &__arrow {
@@ -401,7 +438,6 @@
   &__link {
     display: inline-block;
     padding: 2rem;
-    text-decoration: none;
     color: $gray;
     &--active {
       background-color: $secondary-dark;

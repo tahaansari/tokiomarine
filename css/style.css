@@ -714,7 +714,6 @@ h4 {
   color: #ffffff;
   padding: 2rem 2.4rem;
   border: none;
-  text-decoration: none;
   padding-right: 7rem;
 }
 
@@ -765,7 +764,6 @@ h4 {
   color: #ffffff;
   padding: 2rem 2.4rem;
   border: none;
-  text-decoration: none;
   padding-right: 7rem;
   pointer-events: none;
 }
@@ -782,7 +780,33 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
 }
 
-.btn-secondary {
+.btn-disabled-transparent {
+  font-family: "Avenir-Medium";
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: #706f6f;
+  padding: 2rem 2.4rem;
+  border: 0.2rem solid #706f6f;
+  padding-right: 7rem;
+  pointer-events: none;
+}
+
+.btn-disabled-transparent::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
+}
+
+.btn-primary-dark {
   position: relative;
   display: inline-block;
   background-color: #003366;
@@ -790,24 +814,14 @@ h4 {
   font-size: 1.8rem;
   padding: 2rem 2.4rem;
   border: 0.2rem solid #ffffff;
-  text-decoration: none;
+  padding-right: 7rem;
 }
 
-.btn-secondary__arrow {
-  margin-left: 2rem;
-}
-
-.btn-secondary__text {
+.btn-primary-dark span {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.btn-secondary::before {
+.btn-primary-dark::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -821,29 +835,31 @@ h4 {
           transform-origin: left;
 }
 
-.btn-secondary:hover:not(.btn-secondary--disabled) {
+.btn-primary-dark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
+}
+
+.btn-primary-dark:hover {
   color: #003366;
 }
 
-.btn-secondary:hover:not(.btn-secondary--disabled) .right-arrow {
-  background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
-}
-
-.btn-secondary:hover:not(.btn-secondary--disabled)::before {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.btn-primary-dark:hover::before {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.btn-secondary--disabled {
-  border: 0.2rem solid #706f6f;
-  color: #706f6f;
-  cursor: default;
-}
-
-.btn-secondary--disabled::before {
-  content: none;
+.btn-primary-dark:hover::after {
+  background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
 }
 
 .btn-rounded-primary {
@@ -854,7 +870,6 @@ h4 {
   border-radius: 50%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  text-decoration: none;
   background-color: #0066cc;
   padding: 0;
   border: none;
@@ -885,7 +900,6 @@ h4 {
   border-radius: 50%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  text-decoration: none;
   background-color: #e5e5e5;
   padding: 0;
   border: none;
@@ -912,7 +926,6 @@ h4 {
   border-radius: 50%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  text-decoration: none;
   background-color: #ffffff;
   padding: 0;
   border: none;
@@ -942,69 +955,75 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -8rem -32rem;
 }
 
-.link-primary {
-  font-size: 1.8rem;
+.link-primary-dark {
+  position: relative;
   display: inline-block;
-  color: #003366;
-  text-decoration: none;
   font-size: 1.8rem;
+  color: #003366;
+  font-size: 1.8rem;
+  padding-right: 7rem;
 }
 
-.link-primary__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.link-primary__arrow {
-  margin-left: 1rem;
+.link-primary-dark:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.link-primary:hover:not(.link-primary--disabled) .link-primary__arrow {
-  -webkit-transform: translateX(-0.5rem);
-          transform: translateX(-0.5rem);
+.link-primary-dark:hover:after {
+  right: 3rem;
 }
 
-.link-primary--disabled {
-  color: #706f6f;
-  cursor: default;
+.link-disabled {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #e5e5e5;
+  padding-right: 7rem;
+  pointer-events: none;
 }
 
-.link-secondary {
+.link-disabled:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.link-white {
+  position: relative;
   display: inline-block;
   font-size: 1.8rem;
   color: #ffffff;
-  text-decoration: none;
 }
 
-.link-secondary__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.link-secondary__arrow {
-  margin-left: 1rem;
+.link-white:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-.link-secondary:hover:not(.link-secondary--disabled) .link-secondary__arrow {
-  -webkit-transform: translateX(-0.5rem);
-          transform: translateX(-0.5rem);
-}
-
-.link-secondary--disabled {
-  color: #706f6f;
-  cursor: default;
 }
 
 .btn-rounded-secondary {
@@ -1016,7 +1035,6 @@ h4 {
   border-radius: 50%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  text-decoration: none;
   color: #ffffff;
 }
 
@@ -1121,7 +1139,6 @@ h4 {
 .page-anchor__link {
   display: inline-block;
   padding: 2rem;
-  text-decoration: none;
   color: #4a4948;
 }
 
