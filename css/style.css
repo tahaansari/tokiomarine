@@ -862,7 +862,7 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
 }
 
-.btn-rounded-primary {
+.btn-arrow-primary {
   position: relative;
   display: inline-block;
   width: 6.8rem;
@@ -876,7 +876,7 @@ h4 {
   cursor: pointer;
 }
 
-.btn-rounded-primary:before {
+.btn-arrow-primary:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -888,11 +888,11 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
 }
 
-.btn-rounded-primary:hover {
+.btn-arrow-primary:hover {
   background-color: #003366;
 }
 
-.btn-rounded-disabled {
+.btn-arrow-disabled {
   position: relative;
   display: inline-block;
   width: 6.8rem;
@@ -906,7 +906,7 @@ h4 {
   cursor: pointer;
 }
 
-.btn-rounded-disabled:before {
+.btn-arrow-disabled:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -918,7 +918,7 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
 }
 
-.btn-rounded-white {
+.btn-arrow-white {
   position: relative;
   display: inline-block;
   width: 6.8rem;
@@ -932,7 +932,7 @@ h4 {
   cursor: pointer;
 }
 
-.btn-rounded-white:before {
+.btn-arrow-white:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -944,8 +944,42 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
 }
 
-.btn-rounded-white:hover:before {
-  background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
+.btn-arrow-white:hover:before {
+  background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+}
+
+.btn-download-secondary {
+  position: relative;
+  display: inline-block;
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #bc2b86;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-download-secondary:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2.7rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -32rem;
+}
+
+.btn-download-secondary:hover {
+  background-color: #ffffff;
+}
+
+.btn-download-secondary:hover:before {
+  background: url(../images/sprite.svg) no-repeat -3.2rem -32rem;
 }
 
 .download-icon {
@@ -982,6 +1016,32 @@ h4 {
   right: 3rem;
 }
 
+.link-white {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #ffffff;
+  padding-right: 7rem;
+}
+
+.link-white:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+  width: 3.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.link-white:hover:after {
+  right: 3rem;
+}
+
 .link-disabled {
   position: relative;
   display: inline-block;
@@ -1005,14 +1065,16 @@ h4 {
   transition: 0.2s;
 }
 
-.link-white {
+.link-disabled-light {
   position: relative;
   display: inline-block;
   font-size: 1.8rem;
-  color: #ffffff;
+  color: #706f6f;
+  padding-right: 7rem;
+  pointer-events: none;
 }
 
-.link-white:after {
+.link-disabled-light:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1021,12 +1083,12 @@ h4 {
   right: 2rem;
   width: 3.2rem;
   height: 2rem;
-  background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
+  background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.btn-rounded-secondary {
+.btn-arrow-secondary {
   position: relative;
   display: inline-block;
   width: 6.8rem;
@@ -1038,11 +1100,11 @@ h4 {
   color: #ffffff;
 }
 
-.btn-rounded-secondary:hover:not(.btn-rounded--disabled) {
+.btn-arrow-secondary:hover:not(.btn-arrow--disabled) {
   background-color: #003366;
 }
 
-.btn-rounded-secondary__arrow {
+.btn-arrow-secondary__arrow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1050,7 +1112,7 @@ h4 {
           transform: translate(-50%, -50%);
 }
 
-.btn-rounded-secondary--disabled {
+.btn-arrow-secondary--disabled {
   background-color: #f0f0f0;
   cursor: default;
 }
@@ -1359,17 +1421,6 @@ h4 {
   overflow: hidden;
 }
 
-.card::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#003366));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #003366);
-}
-
 .card:hover {
   -webkit-box-shadow: 5px 6px 15px #f0f0f0;
           box-shadow: 5px 6px 15px #f0f0f0;
@@ -1380,7 +1431,7 @@ h4 {
           transform: scale(1.1);
 }
 
-.card:hover .btn-rounded-secondary__arrow {
+.card:hover .btn-arrow-secondary__arrow {
   background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
 }
 
