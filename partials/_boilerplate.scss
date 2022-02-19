@@ -1,169 +1,164 @@
-// .right-arrow {
+@mixin after($bg) {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: $bg;
+}
+
+.btn {
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: inline-block;
+  position: relative;
+  padding: 2rem 2.4rem;
+  border: none;
+  padding-right: 7rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 3.2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
+  }
+  &--primary {
+    background-color: $primary;
+    color: $white;
+    &::before {
+      @include after(#fff);
+    }
+    &:hover {
+      &::before {
+        transition: 0.5s;
+        transform: scaleX(1);
+      }
+    }
+    span {
+      position: relative;
+    }
+  }
+  &--disabled {
+    background-color: $gray-tint;
+    color: $white;
+    pointer-events: none;
+  }
+  &--primary-dark {
+    background-color: $primary-dark;
+    color: $white;
+    border: 0.2rem solid $white;
+    &::before {
+      @include after(#ffffff);
+    }
+    &:hover {
+      &::before {
+        transition: 0.5s;
+        transform: scaleX(1);
+      }
+    }
+    span {
+      position: relative;
+    }
+  }
+}
+
+// .btn-primary-dark {
+//   position: relative;
 //   display: inline-block;
-//   width: 3.2rem;
-//   height: 2rem;
-//   &--white {
+//   background-color: $primary-dark;
+//   color: $white;
+//   font-size: 1.8rem;
+//   padding: 2rem 2.4rem;
+//   border: 0.2rem solid $white;
+//   padding-right: 7rem;
+//   span {
+//     position: relative;
+//   }
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     background-color: $white;
+//     transform: scaleX(0);
+//     transform-origin: left;
+//   }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     right: 2rem;
+//     transform: translateY(-50%);
+//     width: 3.2rem;
+//     height: 2rem;
 //     background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
 //   }
-//   &--disabled {
-//     background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
-//   }
-//   &--primary {
-//     background: url(../images/sprite.svg) no-repeat -13rem -0.73rem;
-//   }
-//   &--primary-dark {
-//     background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
-//   }
-//   // &--disabled {
-//   //   background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
-//   // }
-//   &--center {
-//     position: absolute;
+//   &:hover {
+//     color: $primary-dark;
+//     &::before {
+//       transition: 0.4s;
+//       transform: scaleX(1);
+//     }
+//     &::after {
+//       background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
+//     }
 //   }
 // }
 
-.btn-primary {
-  font-family: $font-secondary;
-  font-weight: 500;
-  font-size: 1.8rem;
-  display: inline-block;
-  position: relative;
-  background-color: $primary;
-  color: $white;
-  padding: 2rem 2.4rem;
-  border: none;
-  padding-right: 7rem;
-  span {
-    position: relative;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: $primary-dark;
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
-  }
-  &:hover {
-    &::before {
-      transition: 0.5s;
-      transform: scaleX(1);
-    }
-  }
-}
+// .btn-disabled {
+//   font-family: $font-secondary;
+//   font-weight: 500;
+//   font-size: 1.8rem;
+//   display: inline-block;
+//   position: relative;
+//   background-color: $gray-tint;
+//   color: $white;
+//   padding: 2rem 2.4rem;
+//   border: none;
+//   padding-right: 7rem;
+//   pointer-events: none;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     right: 2rem;
+//     transform: translateY(-50%);
+//     width: 3.2rem;
+//     height: 2rem;
+//     background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
+//   }
+// }
 
-.btn-disabled {
-  font-family: $font-secondary;
-  font-weight: 500;
-  font-size: 1.8rem;
-  display: inline-block;
-  position: relative;
-  background-color: $gray-tint;
-  color: $white;
-  padding: 2rem 2.4rem;
-  border: none;
-  padding-right: 7rem;
-  pointer-events: none;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
-  }
-}
-
-.btn-disabled-transparent {
-  font-family: $font-secondary;
-  font-weight: 500;
-  font-size: 1.8rem;
-  display: inline-block;
-  position: relative;
-  background-color: transparent;
-  color: $gray-light;
-  padding: 2rem 2.4rem;
-  border: 0.2rem solid $gray-light;
-  padding-right: 7rem;
-  pointer-events: none;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
-  }
-}
-
-.btn-primary-dark {
-  position: relative;
-  display: inline-block;
-  background-color: $primary-dark;
-  color: $white;
-  font-size: 1.8rem;
-  padding: 2rem 2.4rem;
-  border: 0.2rem solid $white;
-  padding-right: 7rem;
-  span {
-    position: relative;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: $white;
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
-  }
-  &:hover {
-    color: $primary-dark;
-    &::before {
-      transition: 0.4s;
-      transform: scaleX(1);
-    }
-    &::after {
-      background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
-    }
-  }
-}
-
-// &--disabled {
-//   border: 0.2rem solid $gray-light;
+// .btn-disabled-transparent {
+//   font-family: $font-secondary;
+//   font-weight: 500;
+//   font-size: 1.8rem;
+//   display: inline-block;
+//   position: relative;
+//   background-color: transparent;
 //   color: $gray-light;
-//   cursor: default;
-//   &::before {
-//     content: none;
+//   padding: 2rem 2.4rem;
+//   border: 0.2rem solid $gray-light;
+//   padding-right: 7rem;
+//   pointer-events: none;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     right: 2rem;
+//     transform: translateY(-50%);
+//     width: 3.2rem;
+//     height: 2rem;
+//     background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
 //   }
 // }
 
