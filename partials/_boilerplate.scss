@@ -1,24 +1,28 @@
-@mixin after($bg) {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  background-color: $bg;
-}
-
-.btn {
+.btn-rect {
+  position: relative;
+  display: inline-block;
   font-family: $font-secondary;
   font-weight: 500;
+  background-color: $primary;
+  color: $white;
   font-size: 1.8rem;
-  display: inline-block;
-  position: relative;
   padding: 2rem 2.4rem;
   border: none;
   padding-right: 7rem;
+  span {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $primary-dark;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -29,140 +33,41 @@
     height: 2rem;
     background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
   }
-  &--primary {
-    background-color: $primary;
-    color: $white;
+  &:hover {
     &::before {
-      @include after(#fff);
+      transition: 0.5s;
+      transform: scaleX(1);
+    }
+  }
+  &--primary-dark {
+    background-color: $primary-dark;
+    border: 0.2rem solid $white;
+    &::before {
+      background-color: $white;
     }
     &:hover {
-      &::before {
-        transition: 0.5s;
-        transform: scaleX(1);
+      color: $primary-dark;
+      &::after {
+        background: url(../images/sprite.svg) no-repeat -8.8rem -0.8rem;
       }
-    }
-    span {
-      position: relative;
     }
   }
   &--disabled {
     background-color: $gray-tint;
-    color: $white;
     pointer-events: none;
   }
-  &--primary-dark {
-    background-color: $primary-dark;
-    color: $white;
-    border: 0.2rem solid $white;
-    &::before {
-      @include after(#ffffff);
-    }
-    &:hover {
-      &::before {
-        transition: 0.5s;
-        transform: scaleX(1);
-      }
-    }
-    span {
-      position: relative;
+  &--disabled-transparent {
+    background-color: transparent;
+    border: 0.2rem solid $gray-light;
+    color: $gray-light;
+    pointer-events: none;
+    &::after {
+      background: url(../images/sprite.svg) no-repeat -4.8rem -0.8rem;
     }
   }
 }
 
-// .btn-primary-dark {
-//   position: relative;
-//   display: inline-block;
-//   background-color: $primary-dark;
-//   color: $white;
-//   font-size: 1.8rem;
-//   padding: 2rem 2.4rem;
-//   border: 0.2rem solid $white;
-//   padding-right: 7rem;
-//   span {
-//     position: relative;
-//   }
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     background-color: $white;
-//     transform: scaleX(0);
-//     transform-origin: left;
-//   }
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     right: 2rem;
-//     transform: translateY(-50%);
-//     width: 3.2rem;
-//     height: 2rem;
-//     background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
-//   }
-//   &:hover {
-//     color: $primary-dark;
-//     &::before {
-//       transition: 0.4s;
-//       transform: scaleX(1);
-//     }
-//     &::after {
-//       background: url(../images/sprite.svg) no-repeat -8.9rem -0.73rem;
-//     }
-//   }
-// }
-
-// .btn-disabled {
-//   font-family: $font-secondary;
-//   font-weight: 500;
-//   font-size: 1.8rem;
-//   display: inline-block;
-//   position: relative;
-//   background-color: $gray-tint;
-//   color: $white;
-//   padding: 2rem 2.4rem;
-//   border: none;
-//   padding-right: 7rem;
-//   pointer-events: none;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     right: 2rem;
-//     transform: translateY(-50%);
-//     width: 3.2rem;
-//     height: 2rem;
-//     background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
-//   }
-// }
-
-// .btn-disabled-transparent {
-//   font-family: $font-secondary;
-//   font-weight: 500;
-//   font-size: 1.8rem;
-//   display: inline-block;
-//   position: relative;
-//   background-color: transparent;
-//   color: $gray-light;
-//   padding: 2rem 2.4rem;
-//   border: 0.2rem solid $gray-light;
-//   padding-right: 7rem;
-//   pointer-events: none;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     right: 2rem;
-//     transform: translateY(-50%);
-//     width: 3.2rem;
-//     height: 2rem;
-//     background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
-//   }
-// }
-
-.btn-arrow-primary {
+.btn-rounded {
   position: relative;
   display: inline-block;
   width: 6.8rem;
@@ -186,96 +91,58 @@
   &:hover {
     background-color: $primary-dark;
   }
-}
-
-.btn-arrow-disabled {
-  position: relative;
-  display: inline-block;
-  width: 6.8rem;
-  height: 6.8rem;
-  border-radius: 50%;
-  transition: 0.2s;
-  background-color: $disabled;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
-  }
-}
-
-.btn-arrow-white {
-  position: relative;
-  display: inline-block;
-  width: 6.8rem;
-  height: 6.8rem;
-  border-radius: 50%;
-  transition: 0.2s;
-  background-color: $white;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
-  }
-  &:hover {
-    &:before {
-      background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
-    }
-  }
-}
-
-.btn-download-secondary {
-  position: relative;
-  display: inline-block;
-  width: 6.8rem;
-  height: 6.8rem;
-  border-radius: 50%;
-  transition: 0.2s;
-  background-color: $secondary;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2rem;
-    height: 2.7rem;
-    background: url(../images/sprite.svg) no-repeat -0.8rem -32rem;
-  }
-  &:hover {
+  &--white {
     background-color: $white;
     &:before {
-      background: url(../images/sprite.svg) no-repeat -3.2rem -32rem;
+      background: url(../images/sprite.svg) no-repeat -8.8rem -0.73rem;
+    }
+    &:hover {
+      background-color: $white;
+      &:before {
+        background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+      }
+    }
+  }
+  &--primary-download {
+    background-color: $primary;
+    &:before {
+      width: 2rem;
+      height: 2.7rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -32rem;
+    }
+    &:hover {
+      background-color: $white;
+      &:before {
+        width: 2rem;
+        height: 2.7rem;
+        background: url(../images/sprite.svg) no-repeat -5.6rem -32rem;
+      }
+    }
+  }
+  &--secondary-download {
+    background-color: $secondary;
+    &:before {
+      width: 2rem;
+      height: 2.7rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -32rem;
+    }
+    &:hover {
+      background-color: $white;
+      &:before {
+        background: url(../images/sprite.svg) no-repeat -3.2rem -32rem;
+      }
+    }
+  }
+  &--disabled {
+    background-color: $disabled;
+    pointer-events: none;
+    &:before {
+      background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
     }
   }
 }
 
-.download-icon {
-  display: inline-block;
-  width: 2rem;
-  height: 2.7rem;
-  background: url(../images/sprite.svg) no-repeat -8rem -32rem;
-}
-
-.link-primary-dark {
+.btn-link {
   position: relative;
   display: inline-block;
   font-size: 1.8rem;
@@ -298,122 +165,20 @@
       right: 3rem;
     }
   }
-}
-
-.link-white {
-  position: relative;
-  display: inline-block;
-  font-size: 1.8rem;
-  color: $white;
-  padding-right: 7rem;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2rem;
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
-    transition: 0.2s;
+  &--white {
+    color: $white;
+    &::after {
+      background: url(../images/sprite.svg) no-repeat -20.8rem -0.8rem;
+    }
   }
-  &:hover {
-    &:after {
-      right: 3rem;
+  &--disabled {
+    color: $disabled;
+    pointer-events: none;
+    &::after {
+      background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
     }
   }
 }
-
-.link-disabled {
-  position: relative;
-  display: inline-block;
-  font-size: 1.8rem;
-  color: $disabled;
-  padding-right: 7rem;
-  pointer-events: none;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2rem;
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -0.8rem -0.73rem;
-    transition: 0.2s;
-  }
-}
-
-.link-disabled-light {
-  position: relative;
-  display: inline-block;
-  font-size: 1.8rem;
-  color: $gray-light;
-  padding-right: 7rem;
-  pointer-events: none;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2rem;
-    width: 3.2rem;
-    height: 2rem;
-    background: url(../images/sprite.svg) no-repeat -5rem -0.73rem;
-    transition: 0.2s;
-  }
-}
-
-.btn-arrow-secondary {
-  position: relative;
-  display: inline-block;
-  width: 6.8rem;
-  height: 6.8rem;
-  background-color: $primary;
-  border-radius: 50%;
-  transition: 0.2s;
-  color: $white;
-  &:hover:not(.btn-arrow--disabled) {
-    background-color: $primary-dark;
-  }
-  &__arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &--disabled {
-    background-color: $gray-tint;
-    cursor: default;
-  }
-}
-
-// .btn-arrow-white {
-//   position: relative;
-//   display: inline-block;
-//   width: 6.8rem;
-//   height: 6.8rem;
-//   background-color: $gray-tint;
-//   border-radius: 50%;
-//   transition: 0.2s;
-//   border-color: transparent;
-//   cursor: pointer;
-//   &__arrow {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-//   &:hover:not(.btn-arrow-white--disabled) {
-//     .btn-arrow-secondary__arrow {
-//       background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
-//     }
-//   }
-//   &--disabled {
-//     background-color: $gray-tint;
-//     cursor: default;
-//   }
-// }
 
 .pagination {
   &__button {
@@ -742,22 +507,32 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $primary-dark);
-  // }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $primary-dark);
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
   &:hover {
-    box-shadow: 5px 6px 15px $gray-tint;
     .card__img {
       transform: scale(1.1);
     }
-    .btn-arrow-secondary__arrow {
-      background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+    .btn-rounded {
+      &:before {
+        background: url(../images/sprite.svg) no-repeat -12.8rem -0.73rem;
+      }
     }
   }
   &--product {
@@ -793,8 +568,8 @@
     }
   }
   &--video {
-    width: 34.2rem;
     padding: 5rem 2.4rem 3rem;
+    width: 34.2rem;
     &:after {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
     }
@@ -815,6 +590,14 @@
     &:after {
       content: none;
     }
+    &:hover {
+      .btn-rounded--primary-download {
+        background-color: white;
+        &:before {
+          background: url(../images/sprite.svg) no-repeat -5.6rem -32rem;
+        }
+      }
+    }
   }
   &--brochure {
     padding: 5rem 2.4rem 3rem;
@@ -822,7 +605,13 @@
     &:after {
       content: none;
     }
-    .card__content {
+    &:hover {
+      .btn-rounded--secondary-download {
+        background-color: white;
+        &:before {
+          background: url(../images/sprite.svg) no-repeat -3.2rem -32rem;
+        }
+      }
     }
   }
   &__last-flex {
@@ -841,15 +630,7 @@
     transition: 0.2s;
     transform: scale(1);
   }
-  &__content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
+
   &__tag {
     display: inline-block;
     text-transform: uppercase;
@@ -882,5 +663,21 @@
       height: 1.6rem;
       background: url(../images/sprite.svg) no-repeat -0.7rem -29.8rem;
     }
+  }
+}
+
+.header {
+  background-color: $primary;
+  &__nav {
+    background-color: $primary-dark;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__anchor {
+    color: $white;
+    padding: 1.7rem 2.3rem;
+  }
+  &__list {
+    display: flex;
   }
 }

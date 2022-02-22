@@ -5,7 +5,7 @@
     </clipPath>
   </defs>
   <g id="sprite" clip-path="url(#clip-sprite)">
-    <rect width="500" height="700" fill="rgba(255,0,0,0)"/>
+    <rect width="500" height="700" fill="rgba(255,255,255,0)"/>
     <g id="noun_people_to_people_3485979" data-name="noun_people to people_3485979" transform="translate(7.501 104)">
       <g id="Group_12410" data-name="Group 12410" transform="translate(0.5 8)">
         <path id="Path_8382" data-name="Path 8382" d="M2,16.8A8.8,8.8,0,1,0,10.8,8,8.8,8.8,0,0,0,2,16.8Zm14.088,0A5.283,5.283,0,1,1,10.8,11.522,5.283,5.283,0,0,1,16.088,16.8Z" transform="translate(3.283 -8)" fill="#fff"/>
