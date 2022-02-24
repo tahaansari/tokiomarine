@@ -369,47 +369,23 @@
   }
 }
 
-// .select-field {
-//   position: relative;
-//   display: inline-block;
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     right: 2rem;
-//     width: 1.2rem;
-//     height: 2.2rem;
-//     transition: 0.2s;
-//     background: url(../images/sprite.svg) no-repeat -20px -271px;
-//     transform: translateY(-50%) rotate(90deg);
-//   }
-//   &:focus {
-//     outline: none;
-//     &:before {
-//       content: "";
-//       transform: translateY(-50%) rotate(-90deg);
-//     }
-//     &__select:focus {
-//     }
-//   }
-//   &__select {
-//     all: unset;
-//     box-sizing: border-box;
-//     width: 30rem;
-//     border: 0.1rem solid $gray-tint;
-//     font-size: 1.8rem;
-//     padding: 2rem 2.4rem;
-//     appearance: none;
-//   }
-// }
-
-/* The container must be positioned relative: */
 .custom-select {
   position: relative;
-  font-family: Arial;
-}
-
-.custom-select {
+  border: 1px solid $gray-tint;
+  &--rounded {
+    border-radius: 5rem;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    width: 1.2rem;
+    height: 2.2rem;
+    transition: 0.2s;
+    background: url(../images/sprite.svg) no-repeat -20px -271px;
+    transform: translateY(-50%) rotate(90deg) scale(0.6);
+  }
   &--disabled {
     .select-selected {
       border: 0.1rem solid $disabled;
@@ -422,25 +398,8 @@
       }
     }
   }
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  // background-color: DodgerBlue;
-  border: 1px solid $gray-tint;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    width: 1.2rem;
-    height: 2.2rem;
-    transition: 0.2s;
-    background: url(../images/sprite.svg) no-repeat -20px -271px;
-    transform: translateY(-50%) rotate(90deg) scale(0.6);
+  select {
+    display: none;
   }
 }
 
@@ -663,21 +622,5 @@
       height: 1.6rem;
       background: url(../images/sprite.svg) no-repeat -0.7rem -29.8rem;
     }
-  }
-}
-
-.header {
-  background-color: $primary;
-  &__nav {
-    background-color: $primary-dark;
-    display: flex;
-    justify-content: space-between;
-  }
-  &__anchor {
-    color: $white;
-    padding: 1.7rem 2.3rem;
-  }
-  &__list {
-    display: flex;
   }
 }
