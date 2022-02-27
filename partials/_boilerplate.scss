@@ -1,3 +1,22 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @include gt-sm {
+    width: 75rem;
+  }
+  @include gt-md {
+    width: 97rem;
+  }
+  @include gt-lg {
+    width: 117rem;
+  }
+  @include gt-xl {
+    width: 130.2rem;
+  }
+}
+
 .btn-rect {
   position: relative;
   display: inline-block;
