@@ -81,6 +81,7 @@ function closeAllSelect(elmnt) {
 }
 
 // FOR MOBILE MENU
-// document.querySelector(".header__icon--hamburger").addEventListener("click", function () {
-//   document.querySelector(".header__icon--hamburger").classList.toggle("header__icon--hamburger--cross");
-// });
+document.querySelector(".header__icon--hamburger").addEventListener("click", function () {
+  document.querySelector(".header__icon--hamburger").classList.toggle("header__icon--hamburger--cross");
+  document.querySelector(".header__navigation").classList.toggle("header__navigation--open");
+});

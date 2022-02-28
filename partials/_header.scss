@@ -3,9 +3,10 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  // padding: 2rem 0;
+  padding: 2rem 0 3.5rem;
   background: $white;
-  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px -5px rgba(161, 161, 161, 0.1);
+  border-bottom: 1px solid rgba(74, 73, 72, 0.1);
   @include gt-md {
     box-shadow: none;
   }
@@ -18,6 +19,9 @@
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+    @include gt-md {
+      grid-template-columns: auto;
+    }
   }
   &__head-two {
     display: none;
@@ -35,7 +39,7 @@
     border: none;
     box-shadow: 0 0 1rem #0000001a;
     border-radius: 5rem;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
   }
   // &__mobile {
@@ -49,37 +53,65 @@
   // }
   &__navigation {
     position: absolute;
-    background: #ffffff;
+    background: $white;
     width: 100%;
+    top: 100%;
     left: 100%;
     height: 100vh;
     transition: 0.2s;
+    z-index: -1;
+    &--open {
+      left: 0;
+    }
     @include gt-md {
       position: static;
       height: auto;
       display: grid;
       grid-template-columns: auto auto;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
   &__primary-nav {
+    margin-left: -1.5rem;
     @include gt-md {
       display: flex;
     }
   }
   &__secondary-nav {
+    margin-right: -1.5rem;
     @include gt-md {
       display: flex;
     }
   }
   &__primary-item {
-    padding: 1.5rem;
+    font-family: $font-secondary;
     color: inherit;
+    padding: 1.5rem 0;
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    @include gt-md {
+      font-size: 1.6rem;
+    }
+    &--active {
+      border-bottom: 2px solid $primary-light;
+    }
+    &:hover {
+      border-bottom: 2px solid $primary-light;
+    }
   }
   &__secondary-item {
-    padding: 1.5rem;
+    font-family: $font-alternate;
+    padding: 1.5rem 0;
+    margin: 0 1.5rem;
     color: $primary;
+    font-size: 1.8rem;
+    @include gt-md {
+      font-size: 1.6rem;
+    }
+    @include gt-md {
+      font-family: $font-secondary;
+    }
   }
   &__mega-menu {
     display: none;
@@ -105,12 +137,8 @@
     }
     &--hamburger {
       background-position: -0.65rem -40.6rem;
-      &:focus-within {
-        pointer-events: none;
+      &--cross {
         background-position: -0.7rem -38.4rem;
-        ~ .header__navigation {
-          left: 0;
-        }
       }
     }
     @include gt-md {
