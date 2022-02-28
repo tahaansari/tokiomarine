@@ -1,14 +1,25 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.2);
+  padding: 2rem 0;
+  background: $white;
+  &__row {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
   &__icons {
     line-height: 1;
+    justify-self: end;
   }
   &__icon {
     display: inline-block;
     width: 2rem;
     height: 2rem;
+    margin: 0 0.8rem;
     border: none;
     background-color: transparent;
     background-image: url(../images/sprite.svg);
@@ -18,9 +29,9 @@
     }
     &--hamburger {
       background-position: -0.65rem -40.6rem;
-    }
-    &--cross {
-      background-position: -0.7rem -38.4rem;
+      &--cross {
+        background-position: -0.7rem -38.4rem;
+      }
     }
   }
 }
