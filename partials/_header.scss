@@ -107,8 +107,31 @@
   &__mega-menu {
     // display: none;
     position: absolute;
-    background: $white;
+    left: 0;
     width: 100%;
+    background: $white;
+  }
+  &__mega-content {
+    display: grid;
+    grid-template-columns: 30% auto;
+  }
+  &__page-name {
+    margin-bottom: 2rem;
+  }
+  &__ul-col2 {
+    columns: 2;
+  }
+  &__page-desc {
+    margin-bottom: 2rem;
+  }
+  &__page-link {
+    color: inherit;
+    padding: 1.5rem 0;
+  }
+  &__page-list {
+    text-transform: uppercase;
+    color: $primary;
+    font-family: $font-alternate2;
   }
   &__icons {
     line-height: 1;
