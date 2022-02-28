@@ -42,15 +42,6 @@
     padding: 1.5rem;
     text-align: center;
   }
-  // &__mobile {
-  //   display: grid;
-  //   grid-template-columns: auto auto;
-  //   align-items: center;
-  //   padding: 2rem 0;
-  //   @include gt-md {
-  //     display: none;
-  //   }
-  // }
   &__navigation {
     position: absolute;
     background: $white;
@@ -114,7 +105,10 @@
     }
   }
   &__mega-menu {
-    display: none;
+    // display: none;
+    position: absolute;
+    background: $white;
+    width: 100%;
   }
   &__icons {
     line-height: 1;
