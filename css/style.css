@@ -724,7 +724,7 @@ h4 {
   top: 0;
   z-index: 1;
   width: 100%;
-  padding: 2rem 0 3.5rem;
+  padding: 2rem 0;
   background: #ffffff;
   -webkit-box-shadow: 0px 10px 20px -5px rgba(161, 161, 161, 0.1);
           box-shadow: 0px 10px 20px -5px rgba(161, 161, 161, 0.1);
@@ -735,6 +735,7 @@ h4 {
   .header {
     -webkit-box-shadow: none;
             box-shadow: none;
+    padding: 2rem 0 3.5rem;
   }
 }
 
@@ -823,24 +824,18 @@ h4 {
   }
 }
 
-.header__primary-nav {
-  margin-left: -1.5rem;
-}
-
 @media screen and (min-width: 992px) {
   .header__primary-nav {
+    margin-left: -1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.header__secondary-nav {
-  margin-right: -1.5rem;
-}
-
 @media screen and (min-width: 992px) {
   .header__secondary-nav {
+    margin-right: -1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -848,25 +843,47 @@ h4 {
 }
 
 .header__primary-item {
+  position: relative;
   font-family: "Avenir-Medium";
   color: inherit;
   padding: 1.5rem 0;
   margin: 0 1.5rem;
   font-size: 1.8rem;
+  display: block;
+}
+
+.header__primary-item:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0.7);
+          transform: translateY(-50%) scale(0.7);
+  right: 0;
+  width: 1.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -27.2rem;
 }
 
 @media screen and (min-width: 992px) {
   .header__primary-item {
+    border-bottom: 2px solid transparent;
     font-size: 1.6rem;
+  }
+  .header__primary-item:after {
+    content: none;
   }
 }
 
-.header__primary-item--active {
-  border-bottom: 2px solid #009ce5;
+@media screen and (min-width: 992px) {
+  .header__primary-item--active {
+    border-bottom: 2px solid #009ce5;
+  }
 }
 
-.header__primary-item:hover {
-  border-bottom: 2px solid #009ce5;
+@media screen and (min-width: 992px) {
+  .header__primary-item:hover {
+    border-bottom: 2px solid #009ce5;
+  }
 }
 
 .header__secondary-item {
@@ -891,40 +908,115 @@ h4 {
 
 .header__mega-menu {
   position: absolute;
-  left: 0;
   width: 100%;
+  top: 0;
+  height: 100%;
   background: #ffffff;
+  left: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .header__mega-menu {
+    background: #ffffff url("../images/mega-menu-bg.svg") no-repeat bottom left;
+    padding: 8rem;
+    padding-bottom: 26rem;
+  }
 }
 
 .header__mega-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% auto;
-      grid-template-columns: 30% auto;
+  grid-row-gap: 4rem;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .header__mega-content {
+    grid-row-gap: 0;
+    grid-column-gap: 6rem;
+    -ms-grid-columns: 30% auto;
+        grid-template-columns: 30% auto;
+  }
+}
+
+.header__back {
+  font-family: "Avenir-Medium";
+  position: relative;
+  display: inline-block;
+  color: #0066cc;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.header__back:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0.6);
+          transform: translateY(-50%) scale(0.6);
+  width: 1rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -1.07rem -24.4rem;
 }
 
 .header__page-name {
   margin-bottom: 2rem;
 }
 
-.header__ul-col2 {
-  -webkit-columns: 2;
-          columns: 2;
+@media screen and (min-width: 992px) {
+  .header__ul-col2 {
+    -webkit-columns: 2;
+            columns: 2;
+  }
 }
 
 .header__page-desc {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
+  line-height: 2.5rem;
 }
 
 .header__page-link {
+  position: relative;
   color: inherit;
   padding: 1.5rem 0;
+  display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .header__page-link {
+    font-size: 2.1rem;
+  }
+}
+
+.header__page-link:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0.7);
+          transform: translateY(-50%) scale(0.7);
+  right: 0;
+  width: 1.2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -27.2rem;
 }
 
 .header__page-list {
-  text-transform: uppercase;
-  color: #0066cc;
-  font-family: "Avenir-Heavy";
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .header__page-list {
+    display: block;
+    text-transform: uppercase;
+    color: #0066cc;
+    font-family: "Avenir-Heavy";
+    margin-bottom: 2rem;
+  }
 }
 
 .header__icons {
@@ -969,6 +1061,7 @@ h4 {
 }
 
 .footer {
+  margin-top: 25rem;
   position: relative;
 }
 

@@ -3,12 +3,13 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  padding: 2rem 0 3.5rem;
+  padding: 2rem 0;
   background: $white;
   box-shadow: 0px 10px 20px -5px rgba(161, 161, 161, 0.1);
   border-bottom: 1px solid rgba(74, 73, 72, 0.1);
   @include gt-md {
     box-shadow: none;
+    padding: 2rem 0 3.5rem;
   }
   &__mobile-logo {
     @include gt-md {
@@ -64,32 +65,57 @@
     }
   }
   &__primary-nav {
-    margin-left: -1.5rem;
     @include gt-md {
+      margin-left: -1.5rem;
       display: flex;
     }
   }
   &__secondary-nav {
-    margin-right: -1.5rem;
     @include gt-md {
+      margin-right: -1.5rem;
       display: flex;
     }
   }
   &__primary-item {
+    position: relative;
     font-family: $font-secondary;
     color: inherit;
     padding: 1.5rem 0;
     margin: 0 1.5rem;
     font-size: 1.8rem;
+    display: block;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(0.7);
+      right: 0;
+      width: 1.2rem;
+      height: 2rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -27.2rem;
+    }
     @include gt-md {
+      border-bottom: 2px solid transparent;
       font-size: 1.6rem;
+      &:after {
+        content: none;
+      }
     }
     &--active {
-      border-bottom: 2px solid $primary-light;
+      @include gt-md {
+        border-bottom: 2px solid $primary-light;
+      }
     }
     &:hover {
-      border-bottom: 2px solid $primary-light;
+      @include gt-md {
+        border-bottom: 2px solid $primary-light;
+      }
     }
+    // &:focus {
+    //   ~ .header__mega-menu {
+    //     left: 0;
+    //   }
+    // }
   }
   &__secondary-item {
     font-family: $font-alternate;
@@ -105,33 +131,89 @@
     }
   }
   &__mega-menu {
-    // display: none;
     position: absolute;
-    left: 0;
     width: 100%;
+    top: 0;
+    height: 100%;
     background: $white;
+    left: 100%;
+    transition: 0.2s;
+    z-index: 1;
+    @include gt-md {
+      background: $white url("../images/mega-menu-bg.svg") no-repeat bottom left;
+      padding: 8rem;
+      padding-bottom: 26rem;
+    }
   }
   &__mega-content {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-row-gap: 4rem;
+    padding: 2rem;
+    @include gt-md {
+      grid-row-gap: 0;
+      grid-column-gap: 6rem;
+      grid-template-columns: 30% auto;
+    }
+  }
+  &__back {
+    font-family: $font-secondary;
+    position: relative;
+    display: inline-block;
+    color: $primary;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) scale(0.6);
+      width: 1rem;
+      height: 2rem;
+      background: url(../images/sprite.svg) no-repeat -1.07rem -24.4rem;
+    }
   }
   &__page-name {
     margin-bottom: 2rem;
   }
   &__ul-col2 {
-    columns: 2;
+    @include gt-md {
+      columns: 2;
+    }
   }
   &__page-desc {
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
+    line-height: 2.5rem;
   }
   &__page-link {
+    position: relative;
     color: inherit;
     padding: 1.5rem 0;
+    display: block;
+    @include gt-md {
+      font-size: 2.1rem;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(0.7);
+      right: 0;
+      width: 1.2rem;
+      height: 2rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -27.2rem;
+    }
   }
   &__page-list {
-    text-transform: uppercase;
-    color: $primary;
-    font-family: $font-alternate2;
+    display: none;
+    @include gt-md {
+      display: block;
+      text-transform: uppercase;
+      color: $primary;
+      font-family: $font-alternate2;
+      margin-bottom: 2rem;
+    }
   }
   &__icons {
     line-height: 1;

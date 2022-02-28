@@ -85,3 +85,10 @@ document.querySelector(".header__icon--hamburger").addEventListener("click", fun
   document.querySelector(".header__icon--hamburger").classList.toggle("header__icon--hamburger--cross");
   document.querySelector(".header__navigation").classList.toggle("header__navigation--open");
 });
+
+document.querySelector(".header__primary-item").addEventListener("click", function (event) {
+  event.preventDefault();
+  alert("hello world");
+  // document.querySelector(".header__icon--hamburger").classList.toggle("header__icon--hamburger--cross");
+  // document.querySelector(".header__navigation").classList.toggle("header__navigation--open");
+});
