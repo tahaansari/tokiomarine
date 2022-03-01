@@ -1,4 +1,53 @@
 .banner {
+  position: relative;
   height: 100vh;
   background: url("../images/home-bg.png") no-repeat center/cover;
+  color: $white;
+  display: grid;
+  align-items: center;
+  padding: 8.5rem;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 51, 102);
+    background: linear-gradient(90deg, rgba(0, 51, 102, 1) 0%, rgba(0, 51, 102, 0) 100%),
+      linear-gradient(90deg, rgba(9, 9, 121, 0) 86%, rgba(0, 51, 102, 1) 100%);
+  }
+  &__content {
+    position: relative;
+    max-width: 62.4rem;
+    font-size: 2.1rem;
+  }
+  &__heading1 {
+    font-size: 4.8rem;
+    line-height: 1;
+  }
+  &__heading2 {
+    font-size: 11.2rem;
+    line-height: 1;
+    margin-bottom: 3rem;
+  }
+  &__cta {
+    position: absolute;
+    bottom: 10rem;
+    left: 8.5rem;
+    text-transform: uppercase;
+    padding-left: 4rem;
+    font-family: $font-alternate3;
+    font-size: 1.6rem;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-35%) scale(0.7);
+      width: 2rem;
+      height: 2rem;
+      background: url("../images/sprite.svg") no-repeat -0.8rem -45.6rem;
+    }
+  }
 }

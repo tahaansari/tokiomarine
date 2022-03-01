@@ -508,6 +508,14 @@ table {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("../fonts/Avenir-Black.woff2") format("woff2"), url("../fonts/Avenir-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -534,7 +542,7 @@ a {
   font-size: 4.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .heading-large {
     font-size: 8rem;
   }
@@ -544,7 +552,7 @@ a {
   font-size: 4.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .heading-small {
     font-size: 6.4rem;
   }
@@ -554,7 +562,7 @@ a {
   font-size: 2.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .body-xl {
     font-size: 2.4rem;
   }
@@ -564,7 +572,7 @@ a {
   font-size: 1.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .body-large {
     font-size: 2.1rem;
   }
@@ -574,7 +582,7 @@ a {
   font-size: 1.6rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .body-medium {
     font-size: 1.8rem;
   }
@@ -584,7 +592,7 @@ a {
   font-size: 1.4rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .body-regular {
     font-size: 1.6rem;
   }
@@ -594,7 +602,7 @@ a {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .body-small {
     font-size: 1.4rem;
   }
@@ -604,7 +612,7 @@ h1 {
   font-size: 3.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   h1 {
     font-size: 4.8rem;
   }
@@ -614,7 +622,7 @@ h2 {
   font-size: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   h2 {
     font-size: 3.6rem;
   }
@@ -624,7 +632,7 @@ h3 {
   font-size: 2.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   h3 {
     font-size: 3.2rem;
   }
@@ -634,7 +642,7 @@ h4 {
   font-size: 1.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   h4 {
     font-size: 2.4rem;
   }
@@ -724,19 +732,53 @@ h4 {
   top: 0;
   z-index: 1;
   width: 100%;
-  padding: 2rem 0;
-  background: #ffffff;
   -webkit-box-shadow: 0px 10px 20px -5px rgba(161, 161, 161, 0.1);
           box-shadow: 0px 10px 20px -5px rgba(161, 161, 161, 0.1);
   border-bottom: 1px solid rgba(74, 73, 72, 0.1);
+}
+
+.header--with-bg .header__head-one {
+  background: #003366;
+  color: #ffffff;
+}
+
+.header--with-bg .header__head-two {
+  background: transparent;
+}
+
+.header--with-bg .header__logo {
+  background: url("../images/logo-white.svg") no-repeat center/contain;
+}
+
+.header--with-bg .header__mobile-logo {
+  background: url("../images/logo-white.svg") no-repeat center/contain;
+}
+
+.header--with-bg .header__secondary-item {
+  color: #ffffff;
 }
 
 @media screen and (min-width: 992px) {
   .header {
     -webkit-box-shadow: none;
             box-shadow: none;
-    padding: 2rem 0 3.5rem;
   }
+}
+
+.header__logo {
+  width: 25.5rem;
+  height: 8.4rem;
+  background: url("../images/logo.svg") no-repeat center/contain;
+}
+
+.header__mobile-logo {
+  width: 25.5rem;
+  height: 8.4rem;
+  background: url("../images/logo.svg") no-repeat center/contain;
+}
+
+.header__mobile-logo {
+  width: 14rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -753,10 +795,19 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: #ffffff;
 }
 
 @media screen and (min-width: 992px) {
   .header__head-one {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
@@ -768,13 +819,18 @@ h4 {
 
 @media screen and (min-width: 992px) {
   .header__head-two {
+    background: #ffffff;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    -ms-grid-columns: 1fr 48rem 1fr;
+        grid-template-columns: 1fr 48rem 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -805,7 +861,7 @@ h4 {
   -webkit-box-shadow: 0 0 1rem #0000001a;
           box-shadow: 0 0 1rem #0000001a;
   border-radius: 5rem;
-  padding: 1.8rem;
+  padding: 1.8rem 7rem;
   text-align: center;
   width: 100%;
   max-width: 48rem;
@@ -813,14 +869,14 @@ h4 {
 
 .header__navigation {
   position: absolute;
-  background: #ffffff;
-  width: 100%;
   top: 100%;
   left: 100%;
+  width: 100%;
   height: 100vh;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   z-index: -1;
+  background: #ffffff;
 }
 
 .header__navigation--open {
@@ -829,7 +885,11 @@ h4 {
 
 @media screen and (min-width: 992px) {
   .header__navigation {
+    background: transparent;
     position: static;
+    top: auto;
+    left: auto;
+    width: auto;
     height: auto;
     display: -ms-grid;
     display: grid;
@@ -838,7 +898,6 @@ h4 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 3rem;
   }
 }
 
@@ -864,7 +923,7 @@ h4 {
   position: relative;
   font-family: "Avenir-Medium";
   color: inherit;
-  padding: 1.5rem 0;
+  padding: 1.8rem 0;
   margin: 0 1.5rem;
   font-size: 1.8rem;
   display: block;
@@ -906,7 +965,7 @@ h4 {
 
 .header__secondary-item {
   font-family: "Avenir-Roman";
-  padding: 1.5rem 0;
+  padding: 1.8rem 0;
   margin: 0 1.5rem;
   color: #0066cc;
   font-size: 1.8rem;
@@ -999,9 +1058,9 @@ h4 {
   top: 50%;
   -webkit-transform: translateY(-50%) scale(0.6);
           transform: translateY(-50%) scale(0.6);
-  width: 1rem;
-  height: 2rem;
-  background: url(../images/sprite.svg) no-repeat -1.07rem -24.4rem;
+  width: 1.2rem;
+  height: 2.2rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -24.2rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -1110,8 +1169,67 @@ h4 {
 }
 
 .banner {
+  position: relative;
   height: 100vh;
   background: url("../images/home-bg.png") no-repeat center/cover;
+  color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8.5rem;
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #003366;
+  background: -webkit-gradient(linear, left top, right top, from(#003366), to(rgba(0, 51, 102, 0))), -webkit-gradient(linear, left top, right top, color-stop(86%, rgba(9, 9, 121, 0)), to(#003366));
+  background: linear-gradient(90deg, #003366 0%, rgba(0, 51, 102, 0) 100%), linear-gradient(90deg, rgba(9, 9, 121, 0) 86%, #003366 100%);
+}
+
+.banner__content {
+  position: relative;
+  max-width: 62.4rem;
+  font-size: 2.1rem;
+}
+
+.banner__heading1 {
+  font-size: 4.8rem;
+  line-height: 1;
+}
+
+.banner__heading2 {
+  font-size: 11.2rem;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.banner__cta {
+  position: absolute;
+  bottom: 10rem;
+  left: 8.5rem;
+  text-transform: uppercase;
+  padding-left: 4rem;
+  font-family: "Avenir-Black";
+  font-size: 1.6rem;
+}
+
+.banner__cta:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-35%) scale(0.7);
+          transform: translateY(-35%) scale(0.7);
+  width: 2rem;
+  height: 2rem;
+  background: url("../images/sprite.svg") no-repeat -0.8rem -45.6rem;
 }
 
 .footer {
