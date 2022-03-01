@@ -929,23 +929,36 @@ h4 {
   width: 100%;
   height: 100vh;
   background: #ffffff;
-  left: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   z-index: 1;
+  left: 0;
   top: 0;
-}
-
-.header__mega-menu--open {
-  left: 0%;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
 }
 
 @media screen and (min-width: 992px) {
   .header__mega-menu {
+    left: 0;
     top: auto;
     background: #ffffff url("../images/mega-menu-bg.svg") no-repeat bottom left;
     padding: 8rem;
     padding-bottom: 26rem;
+    -webkit-transform: translateY(-120%);
+            transform: translateY(-120%);
+  }
+}
+
+.header__mega-menu--open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@media screen and (min-width: 992px) {
+  .header__mega-menu--open {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -1134,7 +1147,7 @@ h4 {
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
-      grid-template-areas: "left-up" "right" "left-down";
+      grid-template-areas: "left-up" "right" "left-down";
 }
 
 @media screen and (min-width: 992px) {
@@ -1142,7 +1155,7 @@ h4 {
     padding-top: 6rem;
     padding-bottom: 6rem;
     grid-auto-columns: 70% 30%;
-        grid-template-areas: "left-up right" "left-down right";
+        grid-template-areas: "left-up right" "left-down right";
   }
 }
 
