@@ -18,8 +18,8 @@
         <path id="Path_8387-2" data-name="Path 8387" d="M19.892,14H9.284A10.608,10.608,0,0,0,.852,18.226,1.761,1.761,0,0,0,3.67,20.34,7.076,7.076,0,0,1,9.3,17.522H19.892A7.076,7.076,0,0,1,25.5,20.34a1.761,1.761,0,0,0,2.818-2.113A10.6,10.6,0,0,0,19.892,14Z" transform="translate(-0.5 7.132)" fill="#009ce5"/>
       </g>
     </g>
-    <text id="_..." data-name="..." transform="translate(7 50)" fill="#06c" font-size="24" font-family="Helvetica"><tspan x="0" y="0">...</tspan></text>
-    <text id="_...-2" data-name="..." transform="translate(40 50)" fill="#706f6f" font-size="24" font-family="Helvetica"><tspan x="0" y="0">...</tspan></text>
+    <text id="_..." data-name="..." transform="translate(7 50)" fill="#06c" font-size="24" font-family="SegoeUIBlack, Segoe UI"><tspan x="0" y="0">...</tspan></text>
+    <text id="_...-2" data-name="..." transform="translate(40 50)" fill="#706f6f" font-size="24" font-family="SegoeUIBlack, Segoe UI"><tspan x="0" y="0">...</tspan></text>
     <path id="Path_8966" data-name="Path 8966" d="M415.615,2062.93l8.935,8.935-8.935,8.935" transform="translate(-406.615 -1789.8)" fill="none" stroke="#06c" stroke-width="2"/>
     <path id="Path_8966-2" data-name="Path 8966" d="M415.615,2062.93l8.935,8.935-8.935,8.935" transform="translate(-375.615 -1790.93)" fill="none" stroke="#ccc" stroke-width="2"/>
     <path id="Path_8966-3" data-name="Path 8966" d="M415.615,2062.93l8.935,8.935-2.978,2.978-5.957,5.957" transform="translate(-394.615 -1789.8)" fill="none" stroke="#06c" stroke-width="2"/>
@@ -142,6 +142,14 @@
       <line id="Line_1113" data-name="Line 1113" x2="20" transform="translate(328.5 74.5)" fill="none" stroke="#036" stroke-linecap="round" stroke-width="1"/>
       <line id="Line_1114" data-name="Line 1114" x2="20" transform="translate(328.5 82.5)" fill="none" stroke="#036" stroke-linecap="round" stroke-width="1"/>
       <line id="Line_1820" data-name="Line 1820" x2="20" transform="translate(328.5 90.5)" fill="none" stroke="#036" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <g id="Group_1-2" data-name="Group 1" transform="translate(-603.229 218)">
+      <path id="Path_5-2" data-name="Path 5" d="M620.5,222.5l9.92,9.92" transform="translate(-1.397 -1.397)" fill="none" stroke="#036" stroke-width="2"/>
+      <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(612 214)" fill="#fff" stroke="#036" stroke-width="2">
+        <circle cx="7.103" cy="7.103" r="7.103" stroke="none"/>
+        <circle cx="7.103" cy="7.103" r="6.103" fill="none"/>
+      </g>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="3.103" cy="3.103" r="3.103" transform="translate(629.023 214.897)" fill="#f39200"/>
     </g>
   </g>
 </svg>

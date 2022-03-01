@@ -783,14 +783,32 @@ h4 {
       justify-self: end;
 }
 
+.header__search-wrap {
+  position: relative;
+}
+
+.header__search-wrap:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 3rem;
+  width: 2.4rem;
+  height: 1.8rem;
+  background: url(../images/sprite.svg) no-repeat -0.8rem -43.2rem;
+}
+
 .header__search-input {
   outline: none;
   border: none;
   -webkit-box-shadow: 0 0 1rem #0000001a;
           box-shadow: 0 0 1rem #0000001a;
   border-radius: 5rem;
-  padding: 1.5rem;
+  padding: 1.8rem;
   text-align: center;
+  width: 100%;
+  max-width: 48rem;
 }
 
 .header__navigation {
@@ -909,20 +927,42 @@ h4 {
 .header__mega-menu {
   position: absolute;
   width: 100%;
-  top: 0;
-  height: 100%;
+  height: 100vh;
   background: #ffffff;
   left: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   z-index: 1;
+  top: 0;
+}
+
+.header__mega-menu--open {
+  left: 0%;
 }
 
 @media screen and (min-width: 992px) {
   .header__mega-menu {
+    top: auto;
     background: #ffffff url("../images/mega-menu-bg.svg") no-repeat bottom left;
     padding: 8rem;
     padding-bottom: 26rem;
+  }
+}
+
+.header__menu-close {
+  position: absolute;
+  right: 10rem;
+  top: 5rem;
+  width: 2rem;
+  height: 2rem;
+  background: url(../images/sprite.svg) no-repeat -0.7rem -38.4rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .header__menu-close {
+    display: block;
   }
 }
 
@@ -964,6 +1004,12 @@ h4 {
   background: url(../images/sprite.svg) no-repeat -1.07rem -24.4rem;
 }
 
+@media screen and (min-width: 992px) {
+  .header__back {
+    display: none;
+  }
+}
+
 .header__page-name {
   margin-bottom: 2rem;
 }
@@ -987,12 +1033,6 @@ h4 {
   display: block;
 }
 
-@media screen and (min-width: 992px) {
-  .header__page-link {
-    font-size: 2.1rem;
-  }
-}
-
 .header__page-link:after {
   content: "";
   position: absolute;
@@ -1003,6 +1043,15 @@ h4 {
   width: 1.2rem;
   height: 2rem;
   background: url(../images/sprite.svg) no-repeat -0.8rem -27.2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .header__page-link {
+    font-size: 2.1rem;
+  }
+  .header__page-link:after {
+    content: none;
+  }
 }
 
 .header__page-list {
@@ -1058,6 +1107,11 @@ h4 {
   .header__icon {
     display: none;
   }
+}
+
+.banner {
+  height: 100vh;
+  background: url("../images/home-bg.png") no-repeat center/cover;
 }
 
 .footer {

@@ -35,13 +35,28 @@
   &__language {
     justify-self: end;
   }
+  &__search-wrap {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3rem;
+      width: 2.4rem;
+      height: 1.8rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -43.2rem;
+    }
+  }
   &__search-input {
     outline: none;
     border: none;
     box-shadow: 0 0 1rem #0000001a;
     border-radius: 5rem;
-    padding: 1.5rem;
+    padding: 1.8rem;
     text-align: center;
+    width: 100%;
+    max-width: 48rem;
   }
   &__navigation {
     position: absolute;
@@ -133,16 +148,33 @@
   &__mega-menu {
     position: absolute;
     width: 100%;
-    top: 0;
-    height: 100%;
+    height: 100vh;
     background: $white;
     left: 100%;
     transition: 0.2s;
     z-index: 1;
+    top: 0;
+    &--open {
+      left: 0%;
+    }
     @include gt-md {
+      top: auto;
       background: $white url("../images/mega-menu-bg.svg") no-repeat bottom left;
       padding: 8rem;
       padding-bottom: 26rem;
+    }
+  }
+  &__menu-close {
+    position: absolute;
+    right: 10rem;
+    top: 5rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/sprite.svg) no-repeat -0.7rem -38.4rem;
+    cursor: pointer;
+    display: none;
+    @include gt-md {
+      display: block;
     }
   }
   &__mega-content {
@@ -173,6 +205,9 @@
       height: 2rem;
       background: url(../images/sprite.svg) no-repeat -1.07rem -24.4rem;
     }
+    @include gt-md {
+      display: none;
+    }
   }
   &__page-name {
     margin-bottom: 2rem;
@@ -191,9 +226,6 @@
     color: inherit;
     padding: 1.5rem 0;
     display: block;
-    @include gt-md {
-      font-size: 2.1rem;
-    }
     &:after {
       content: "";
       position: absolute;
@@ -203,6 +235,12 @@
       width: 1.2rem;
       height: 2rem;
       background: url(../images/sprite.svg) no-repeat -0.8rem -27.2rem;
+    }
+    @include gt-md {
+      font-size: 2.1rem;
+      &:after {
+        content: none;
+      }
     }
   }
   &__page-list {

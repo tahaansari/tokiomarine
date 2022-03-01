@@ -86,9 +86,31 @@ document.querySelector(".header__icon--hamburger").addEventListener("click", fun
   document.querySelector(".header__navigation").classList.toggle("header__navigation--open");
 });
 
-document.querySelector(".header__primary-item").addEventListener("click", function (event) {
-  event.preventDefault();
-  alert("hello world");
-  // document.querySelector(".header__icon--hamburger").classList.toggle("header__icon--hamburger--cross");
-  // document.querySelector(".header__navigation").classList.toggle("header__navigation--open");
+// alert("hello");
+
+// CLOSE ALL OPEN MENU AND OPEN CURRENT MENU
+document.querySelectorAll(".header__primary-item").forEach((item) => {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (document.querySelector(".header__mega-menu--open")) {
+      document.querySelector(".header__mega-menu--open").classList.remove("header__mega-menu--open");
+    }
+    this.nextElementSibling.classList.add("header__mega-menu--open");
+  });
+});
+
+// CLOSE MENU
+document.querySelectorAll(".header__menu-close").forEach((item) => {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(".header__mega-menu--open").classList.remove("header__mega-menu--open");
+  });
+});
+
+// CLOSE MOBILE MENU
+document.querySelectorAll(".header__back").forEach((item) => {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(".header__mega-menu--open").classList.remove("header__mega-menu--open");
+  });
 });
