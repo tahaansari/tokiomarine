@@ -8,10 +8,19 @@
   &--with-bg {
     .header__head-one {
       background: $primary-dark;
-      color: $white;
     }
     .header__head-two {
       background: transparent;
+    }
+    .header__primary-item {
+      @include gt-md {
+        color: $white;
+      }
+    }
+    .header__secondary-item {
+      @include gt-md {
+        color: $white;
+      }
     }
     .header__logo {
       background: url("../images/logo-white.svg") no-repeat center/contain;
@@ -19,8 +28,11 @@
     .header__mobile-logo {
       background: url("../images/logo-white.svg") no-repeat center/contain;
     }
-    .header__secondary-item {
-      color: $white;
+    .header__icon--search {
+      background-position: -3rem -36rem;
+    }
+    .header__icon--hamburger {
+      background-position: -4rem -40.6rem;
     }
   }
   @include gt-md {
@@ -38,6 +50,7 @@
   }
   &__mobile-logo {
     width: 14rem;
+    height: 4.6rem;
     @include gt-md {
       display: none;
     }

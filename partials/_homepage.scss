@@ -5,7 +5,6 @@
   color: $white;
   display: grid;
   align-items: center;
-  padding: 8.5rem;
   &:before {
     content: "";
     position: absolute;
@@ -21,24 +20,37 @@
     position: relative;
     max-width: 62.4rem;
     font-size: 2.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @include gt-md {
+      padding: 8.5rem;
+    }
   }
   &__heading1 {
+    font-family: $font-secondary;
     font-size: 4.8rem;
     line-height: 1;
   }
   &__heading2 {
-    font-size: 11.2rem;
+    font-family: $font-alternate2;
+    font-size: 7.8rem;
     line-height: 1;
     margin-bottom: 3rem;
+    @include gt-md {
+      font-size: 11.2rem;
+    }
   }
   &__cta {
     position: absolute;
-    bottom: 10rem;
-    left: 8.5rem;
+    bottom: 8rem;
     text-transform: uppercase;
     padding-left: 4rem;
     font-family: $font-alternate3;
     font-size: 1.6rem;
+    left: 2rem;
+    @include gt-md {
+      left: 8.5rem;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -48,6 +60,101 @@
       width: 2rem;
       height: 2rem;
       background: url("../images/sprite.svg") no-repeat -0.8rem -45.6rem;
+    }
+  }
+}
+
+.featured-story {
+  background: url("../images/featured-story-bg.png") no-repeat center/cover;
+  padding-top: 30rem;
+  @include gt-md {
+    padding-top: 0;
+    padding-bottom: 30rem;
+  }
+  &__content {
+    background: $white;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    max-width: 34rem;
+    @include gt-md {
+      max-width: 48rem;
+    }
+  }
+  &__title {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include gt-md {
+      margin-top: 0;
+    }
+  }
+  &__heading {
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.financial-power {
+  position: relative;
+  background: rgb(0, 51, 102);
+  background: linear-gradient(90deg, rgba(0, 51, 102, 1) 29%, rgba(0, 102, 204, 1) 100%);
+  color: #ffffff;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 18rem;
+  @include gt-md {
+    padding: 6rem 18rem 6rem 32.5rem;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    margin-top: 5rem;
+    width: 27.5rem;
+    height: 18.5rem;
+    background: url("../images/mega-menu-bg.svg") no-repeat center/contain;
+    bottom: -4rem;
+    left: 0;
+    @include gt-md {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+  }
+  &__table {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    border-top: 1px solid $secondary-alternate-light;
+  }
+  &__row {
+    border-bottom: 1px solid $primary;
+    height: 5rem;
+    vertical-align: middle;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__col {
+    height: 8rem;
+    vertical-align: middle;
+    text-align: center;
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
     }
   }
 }
