@@ -7,8 +7,14 @@ h6 {
   line-height: 1;
 }
 
-.color-blue {
-  color: $primary;
+.section-heading {
+  margin-bottom: 2rem;
+  @include gt-md {
+    margin-bottom: 3rem;
+  }
+  &__primary {
+    color: $primary;
+  }
 }
 .pt-0 {
   padding-top: 0;
@@ -215,7 +221,7 @@ h5 {
     }
   }
   &--primary-dark {
-    background-color: $primary-dark;
+    background-color: transparent;
     border: 0.2rem solid $white;
     &::before {
       background-color: $white;
@@ -227,6 +233,7 @@ h5 {
       }
     }
   }
+
   &--disabled {
     background-color: $gray-tint;
     pointer-events: none;

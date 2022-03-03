@@ -12,6 +12,7 @@ body {
   color: $gray;
   font-size: 1.6rem;
   line-height: 1.6;
+  padding-top: 18rem;
 }
 
 a {
@@ -25,5 +26,8 @@ section {
   @include gt-md {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+  &:first-of-type {
+    padding-top: 0;
   }
 }

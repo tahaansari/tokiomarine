@@ -531,6 +531,7 @@ body {
   color: #4a4948;
   font-size: 1.6rem;
   line-height: 1.6;
+  padding-top: 18rem;
 }
 
 a {
@@ -548,6 +549,10 @@ section {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+}
+
+section:first-of-type {
+  padding-top: 0;
 }
 
 .header {
@@ -1236,8 +1241,82 @@ section {
   text-align: right;
 }
 
+.featured-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 5rem;
+}
+
+.featured-products::-webkit-scrollbar {
+  height: 4px;
+  background-color: #4a494833;
+}
+
+.featured-products::-webkit-scrollbar-thumb {
+  background-color: #f39200;
+}
+
+.featured-products__item {
+  margin: 0 1.25rem;
+}
+
+.featured-products__item:first-child {
+  margin-left: 0;
+}
+
+.latest-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 5rem;
+}
+
+.latest-news::-webkit-scrollbar {
+  height: 4px;
+  background-color: #4a494833;
+}
+
+.latest-news::-webkit-scrollbar-thumb {
+  background-color: #f39200;
+}
+
+.latest-news__item {
+  margin: 0 1.25rem;
+}
+
+.latest-news__item:first-child {
+  margin-left: 0;
+}
+
+.explore-careers {
+  padding-top: 25rem;
+  padding-bottom: 25rem;
+  background: url("../images/careers.png") no-repeat center/cover;
+  color: #ffffff;
+}
+
+.explore-careers__content {
+  max-width: 42rem;
+}
+
+.explore-careers__heading {
+  margin-bottom: 3rem;
+}
+
+.explore-careers__desc {
+  margin-bottom: 3rem;
+}
+
+.page-head {
+  background: #003366;
+  color: #ffffff;
+}
+
 .footer {
-  margin-top: 25rem;
+  margin-top: 3rem;
   position: relative;
 }
 
@@ -1363,7 +1442,17 @@ h6 {
   line-height: 1;
 }
 
-.color-blue {
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+}
+
+.section-heading__primary {
   color: #0066cc;
 }
 
@@ -1642,7 +1731,7 @@ h5 {
 }
 
 .btn-rect--primary-dark {
-  background-color: #003366;
+  background-color: transparent;
   border: 0.2rem solid #ffffff;
 }
 
