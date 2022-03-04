@@ -80,18 +80,6 @@
       max-width: 48rem;
     }
   }
-  &__title {
-    display: inline-block;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    @include gt-md {
-      margin-top: 0;
-    }
-  }
-  &__heading {
-    line-height: 1.2;
-    margin-bottom: 2rem;
-  }
   &__bottom {
     display: grid;
     grid-template-columns: auto auto;
@@ -126,14 +114,8 @@
       transform: translateY(-50%);
     }
   }
-  &__title {
-    margin-bottom: 3rem;
-  }
-  &__desc {
-    font-size: 1.8rem;
-  }
   &__table {
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
     width: 100%;
     border-top: 1px solid $secondary-alternate-light;
@@ -204,11 +186,5 @@
   color: $white;
   &__content {
     max-width: 42rem;
-  }
-  &__heading {
-    margin-bottom: 3rem;
-  }
-  &__desc {
-    margin-bottom: 3rem;
   }
 }

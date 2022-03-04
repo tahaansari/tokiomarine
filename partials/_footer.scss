@@ -62,7 +62,6 @@
     background-image: linear-gradient(to right, $primary-dark, $primary);
     color: $white;
     padding: 2.5rem 0;
-    font-size: 1.8rem;
     @include gt-md {
       &:before {
         content: "";

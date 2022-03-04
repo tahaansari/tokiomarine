@@ -1,0 +1,131 @@
+.page-head {
+  background: $primary-dark;
+  color: $white;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  &__title {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.business-unit-wrap {
+  display: grid;
+  grid-gap: 2.5rem;
+  @include gt-md {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.business-unit {
+  border: 1px solid $gray-tint;
+  border-top: 2px solid $primary;
+  padding: 3rem;
+  padding-top: 4rem;
+  &__address {
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -48.2rem;
+    }
+  }
+  &__number {
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+    color: $primary;
+    text-decoration: underline;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -50.2rem;
+    }
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.BU-banner {
+  position: relative;
+  background: url("../images/business-unit-bg.png") no-repeat center/cover;
+  color: $white;
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+  &__content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @include gt-md {
+      max-width: 70rem;
+      padding: 8.5rem;
+    }
+  }
+  &__heading {
+    font-size: 4rem;
+    line-height: 1.1;
+    @include gt-md {
+      font-size: 8rem;
+    }
+  }
+  &__cta {
+    position: absolute;
+    bottom: 8rem;
+    text-transform: uppercase;
+    padding-left: 4rem;
+    font-family: $font-alternate3;
+    font-size: 1.6rem;
+    left: 2rem;
+    @include gt-md {
+      left: 8.5rem;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-35%) scale(0.7);
+      width: 2rem;
+      height: 2rem;
+      background: url("../images/sprite.svg") no-repeat -0.8rem -45.6rem;
+    }
+  }
+  &__page-anchor {
+    position: absolute;
+    bottom: 0;
+    right: 8rem;
+  }
+}
+
+.claim-info {
+  max-width: 80rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-left: 20%;
+  &__btn {
+    margin-top: 3rem;
+  }
+}
+
+.product-range {
+  background: $gray-tint;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
