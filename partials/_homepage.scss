@@ -142,41 +142,19 @@
 }
 
 .featured-products {
-  display: flex;
-  overflow-x: scroll;
+  display: grid;
+  grid-auto-flow: column;
   padding-bottom: 5rem;
-  &::-webkit-scrollbar {
-    height: 4px;
-    background-color: #4a494833;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $primary-alternate-dark;
-  }
-  &__item {
-    margin: 0 1.25rem;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+  overflow-x: scroll;
+  grid-gap: 3rem;
 }
 
 .latest-news {
-  display: flex;
-  overflow-x: scroll;
+  display: grid;
+  grid-auto-flow: column;
   padding-bottom: 5rem;
-  &::-webkit-scrollbar {
-    height: 4px;
-    background-color: #4a494833;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $primary-alternate-dark;
-  }
-  &__item {
-    margin: 0 1.25rem;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+  overflow-x: scroll;
+  grid-gap: 3rem;
 }
 
 .explore-careers {

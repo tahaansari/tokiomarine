@@ -129,3 +129,61 @@
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
+
+.product-range-wrap {
+  padding-bottom: 5rem;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+}
+
+.product {
+  width: 51rem;
+  margin: 2rem;
+  &:first-child {
+    margin-left: 0;
+  }
+  &__content {
+    padding: 4rem 3.5rem;
+    background: $white;
+  }
+  &__thumbnail {
+    height: 34.4rem;
+    object-fit: cover;
+    display: block;
+  }
+  &__bottom {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.guides-resources {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 49rem;
+    height: 24rem;
+    background: url("../images/right-wave-bg.png") no-repeat center/contain;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  &__wrap {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    padding-bottom: 4rem;
+    grid-gap: 2rem;
+  }
+}

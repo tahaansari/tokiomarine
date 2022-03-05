@@ -91,3 +91,11 @@ h6 {
     width: 130.2rem;
   }
 }
+
+::-webkit-scrollbar {
+  height: 4px;
+  background-color: #4a494833;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary-alternate-dark;
+}
