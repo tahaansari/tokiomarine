@@ -3,9 +3,20 @@
   color: $white;
   padding-top: 2rem;
   padding-bottom: 7rem;
+  &--transparent {
+    background: transparent;
+    color: $gray;
+  }
   &__title {
     margin-top: 8rem;
     margin-bottom: 3rem;
+    &--primary {
+      color: $primary;
+    }
+  }
+  &__desc {
+    max-width: 80rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -185,5 +196,75 @@
     overflow-x: scroll;
     padding-bottom: 4rem;
     grid-gap: 2rem;
+  }
+}
+
+.group-contacts {
+  background: $gray-tint;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  &__heading {
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+  }
+  &__btn {
+    margin-bottom: 3rem;
+  }
+  &__sub-heading {
+    font-family: $font-secondary;
+    font-size: 2.4rem;
+  }
+  &__number {
+    position: relative;
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    padding-left: 3rem;
+    color: $primary;
+    text-decoration: underline;
+    font-size: 2.4rem;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(../images/sprite.svg) no-repeat -0.8rem -50.2rem;
+    }
+  }
+  &__row {
+    @include gt-md {
+      display: grid;
+      grid-template-columns: 30rem auto;
+    }
+  }
+  &__col2 {
+    display: flex;
+    // padding-bottom: 5rem;
+    // overflow-x: scroll;
+  }
+  &__contacts {
+    display: inline-block;
+    width: 30rem;
+    flex-basis: 30rem;
+  }
+}
+
+.BU-products {
+  &__row {
+    @include gt-md {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: 30rem auto;
+    }
+  }
+  &__products-wrap {
+    @include gt-md {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }

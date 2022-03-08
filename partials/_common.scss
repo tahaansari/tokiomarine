@@ -36,6 +36,10 @@ section {
   }
 }
 
+img {
+  width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -93,7 +97,7 @@ h6 {
 }
 
 ::-webkit-scrollbar {
-  height: 4px;
+  height: 15px;
   background-color: #4a494833;
 }
 ::-webkit-scrollbar-thumb {
