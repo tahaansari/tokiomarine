@@ -139,36 +139,15 @@
   background: $gray-tint;
   padding-top: 10rem;
   padding-bottom: 10rem;
-}
-
-.product-range-wrap {
-  padding-bottom: 5rem;
-  display: grid;
-  grid-auto-flow: column;
-  overflow-x: scroll;
-}
-
-.product {
-  width: 51rem;
-  margin: 2rem;
-  &:first-child {
-    margin-left: 0;
-  }
-  &__content {
-    padding: 4rem 3.5rem;
-    background: $white;
-  }
-  &__thumbnail {
-    height: 34.4rem;
-    object-fit: cover;
-    display: block;
-  }
-  &__bottom {
-    margin-top: 3rem;
+  &__wrap {
     display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    align-items: center;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    grid-gap: 2rem;
+    padding-bottom: 5rem;
+  }
+  &__product {
+    width: 51.6rem;
   }
 }
 
@@ -261,10 +240,31 @@
     }
   }
   &__products-wrap {
+    display: grid;
+    grid-gap: 2rem;
+    @include gt-md {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.BU-more-products {
+  background-color: $gray-tint;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  @include gt-md {
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+  }
+  &__row {
     @include gt-md {
       display: grid;
       grid-gap: 2rem;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 30rem auto;
     }
+  }
+  &__products-wrap {
+    display: grid;
+    grid-gap: 2rem;
   }
 }

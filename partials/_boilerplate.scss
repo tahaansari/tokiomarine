@@ -503,19 +503,20 @@
 .custom-select {
   position: relative;
   border: 1px solid $gray-tint;
-  &--rounded {
-    border-radius: 5rem;
-  }
+  width: 30rem;
   &:after {
     content: "";
     position: absolute;
     top: 50%;
-    right: 2rem;
+    right: 1rem;
     width: 1.2rem;
     height: 2.2rem;
     transition: 0.2s;
     background: url(../images/sprite.svg) no-repeat -20px -271px;
     transform: translateY(-50%) rotate(90deg) scale(0.6);
+  }
+  &--rounded {
+    border-radius: 5rem;
   }
   &--disabled {
     .select-selected {
@@ -528,6 +529,10 @@
         background: url(../images/sprite.svg) no-repeat -39px -272px;
       }
     }
+  }
+  &--border-bottom {
+    border: none;
+    border-bottom: 1px solid $primary;
   }
   select {
     display: none;
@@ -561,7 +566,7 @@
 .select-items div,
 .select-selected {
   // color: #ffffff;
-  padding: 8px 16px;
+  padding: 0.8rem 1rem;
   cursor: pointer;
 }
 
@@ -805,5 +810,30 @@
         background: url(../images/sprite.svg) no-repeat -0.6rem -57.5rem;
       }
     }
+  }
+}
+
+.product {
+  &--horizontal {
+    display: grid;
+    @include gt-md {
+      grid-template-columns: auto auto;
+    }
+  }
+  &__content {
+    padding: 4rem 3.5rem;
+    background: $white;
+  }
+  &__thumbnail {
+    display: block;
+    // height: 100%;
+    // object-fit: cover;
+  }
+  &__bottom {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
   }
 }
