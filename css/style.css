@@ -1596,6 +1596,10 @@ h6 {
   background: url(../images/sprite.svg) no-repeat -0.7rem -29.8rem;
 }
 
+.contact__img {
+  display: block;
+}
+
 .contact__content {
   padding: 2.4rem 0;
 }
@@ -2605,6 +2609,14 @@ h6 {
   grid-gap: 2rem;
 }
 
+.guides-resources__card {
+  width: 30rem;
+}
+
+.guides-resources__card:first-of-type {
+  width: 62.4rem;
+}
+
 .group-contacts {
   background: #f0f0f0;
   padding-top: 4rem;
@@ -2654,20 +2666,23 @@ h6 {
     display: grid;
     -ms-grid-columns: 30rem auto;
         grid-template-columns: 30rem auto;
+    grid-gap: 2rem;
   }
 }
 
 .group-contacts__col2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
 }
 
 .group-contacts__contacts {
-  display: inline-block;
   width: 30rem;
-  -ms-flex-preferred-size: 30rem;
-      flex-basis: 30rem;
+}
+
+.group-contacts__contacts:first-of-type {
+  width: 62.4rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2741,7 +2756,7 @@ h6 {
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
-      grid-template-areas: "left-up" "right" "left-down";
+      grid-template-areas: "left-up" "right" "left-down";
 }
 
 @media screen and (min-width: 992px) {
@@ -2749,7 +2764,7 @@ h6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
     grid-auto-columns: 70% 30%;
-        grid-template-areas: "left-up right" "left-down right";
+        grid-template-areas: "left-up right" "left-down right";
   }
 }
 

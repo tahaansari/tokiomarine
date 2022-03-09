@@ -176,6 +176,13 @@
     padding-bottom: 4rem;
     grid-gap: 2rem;
   }
+  &__card {
+    width: 30rem;
+    // 624
+    &:first-of-type {
+      width: 62.4rem;
+    }
+  }
 }
 
 .group-contacts {
@@ -217,17 +224,19 @@
     @include gt-md {
       display: grid;
       grid-template-columns: 30rem auto;
+      grid-gap: 2rem;
     }
   }
   &__col2 {
-    display: flex;
-    // padding-bottom: 5rem;
-    // overflow-x: scroll;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 2rem;
   }
   &__contacts {
-    display: inline-block;
     width: 30rem;
-    flex-basis: 30rem;
+    &:first-of-type {
+      width: 62.4rem;
+    }
   }
 }
 

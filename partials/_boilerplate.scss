@@ -764,6 +764,9 @@
 }
 
 .contact {
+  &__img {
+    display: block;
+  }
   &__content {
     padding: 2.4rem 0;
   }
