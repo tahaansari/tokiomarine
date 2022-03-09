@@ -503,7 +503,10 @@
 .custom-select {
   position: relative;
   border: 1px solid $gray-tint;
-  width: 30rem;
+  width: 20rem;
+  @include gt-md {
+    width: 25rem;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -818,19 +821,21 @@
 
 .product {
   &--horizontal {
-    display: grid;
     @include gt-md {
-      grid-template-columns: auto auto;
+      display: grid;
+      grid-template-columns: 40% auto;
     }
-  }
-  &__content {
-    padding: 4rem 3.5rem;
-    background: $white;
   }
   &__thumbnail {
     display: block;
-    // height: 100%;
-    // object-fit: cover;
+    @include gt-md {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    padding: 4rem 2.5rem;
+    background: $white;
   }
   &__bottom {
     margin-top: 3rem;

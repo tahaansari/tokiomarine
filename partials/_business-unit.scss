@@ -248,7 +248,7 @@
       grid-template-columns: 30rem auto;
     }
   }
-  &__products-wrap {
+  &__col2 {
     display: grid;
     grid-gap: 2rem;
     @include gt-md {
@@ -272,7 +272,7 @@
       grid-template-columns: 30rem auto;
     }
   }
-  &__products-wrap {
+  &__col2 {
     display: grid;
     grid-gap: 2rem;
   }
