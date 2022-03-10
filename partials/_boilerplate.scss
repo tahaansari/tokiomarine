@@ -412,12 +412,15 @@
   background: $white;
   display: grid;
   grid-auto-flow: column;
+  overflow-x: auto;
   color: $gray;
   &__link {
     position: relative;
-    padding: 2rem 2rem 1rem;
     font-size: 1.2rem;
+    width: 8.2rem;
     color: $gray;
+    text-align: center;
+    padding: 2rem 0rem;
     &:before {
       content: "";
       position: absolute;
@@ -470,9 +473,9 @@
   &__icon {
     display: block;
     margin: auto;
-    margin-bottom: 0.5rem;
     width: 3.5rem;
     height: 3.5rem;
+    transform: scale(0.7);
     &--products {
       background: url(../images/sprite.svg) no-repeat -5.2rem -19.9rem;
     }
@@ -549,9 +552,9 @@
 .custom-select {
   position: relative;
   border: 1px solid $gray-tint;
-  width: 20rem;
+  width: 19rem;
   @include gt-md {
-    width: 25rem;
+    width: 24rem;
   }
   &:after {
     content: "";
@@ -883,7 +886,7 @@
     // }
   }
   &__content {
-    padding: 4rem 2.5rem;
+    padding: 4rem 2rem;
     background: $white;
   }
   &__bottom {

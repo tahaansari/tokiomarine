@@ -1176,14 +1176,17 @@ h6 {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  overflow-x: auto;
   color: #4a4948;
 }
 
 .page-anchor__link {
   position: relative;
-  padding: 2rem 2rem 1rem;
   font-size: 1.2rem;
+  width: 8.2rem;
   color: #4a4948;
+  text-align: center;
+  padding: 2rem 0rem;
 }
 
 .page-anchor__link:before {
@@ -1230,9 +1233,10 @@ h6 {
 .page-anchor__icon {
   display: block;
   margin: auto;
-  margin-bottom: 0.5rem;
   width: 3.5rem;
   height: 3.5rem;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .page-anchor__icon--products {
@@ -1324,12 +1328,12 @@ h6 {
 .custom-select {
   position: relative;
   border: 1px solid #f0f0f0;
-  width: 20rem;
+  width: 19rem;
 }
 
 @media screen and (min-width: 992px) {
   .custom-select {
-    width: 25rem;
+    width: 24rem;
   }
 }
 
@@ -1720,7 +1724,7 @@ h6 {
 }
 
 .product__content {
-  padding: 4rem 2.5rem;
+  padding: 4rem 2rem;
   background: #ffffff;
 }
 
@@ -2292,8 +2296,8 @@ h6 {
 }
 
 .featured-story {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2516,8 +2520,8 @@ h6 {
   position: relative;
   background: url("../images/business-unit-bg.png") no-repeat center/cover;
   color: #ffffff;
-  padding-top: 12.5rem;
-  padding-bottom: 12.5rem;
+  padding-top: 12rem;
+  padding-bottom: 20rem;
 }
 
 .BU-banner__content {
@@ -2545,7 +2549,7 @@ h6 {
 
 .BU-banner__cta {
   position: absolute;
-  bottom: 8rem;
+  bottom: 15rem;
   text-transform: uppercase;
   padding-left: 4rem;
   font-family: "Avenir-Black";
@@ -2574,6 +2578,7 @@ h6 {
 .BU-banner__page-anchor {
   position: absolute;
   bottom: 0;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 992px) {
@@ -2583,8 +2588,15 @@ h6 {
 }
 
 .claim-info {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+@media screen and (min-width: 992px) {
+  .claim-info {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .claim-info__btn {
@@ -2593,8 +2605,8 @@ h6 {
 
 .product-range {
   background: #f0f0f0;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2604,23 +2616,29 @@ h6 {
   }
 }
 
-.product-range__wrap {
+.product-range__product-wrap {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   overflow-x: scroll;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
   padding-bottom: 5rem;
 }
 
 .product-range__product {
-  width: 51.6rem;
+  width: 31rem;
+}
+
+@media screen and (min-width: 992px) {
+  .product-range__product {
+    width: 51.6rem;
+  }
 }
 
 .guides-resources {
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2699,8 +2717,8 @@ h6 {
 
 .group-contacts {
   background: #f0f0f0;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2753,7 +2771,7 @@ h6 {
     display: grid;
     -ms-grid-columns: 30rem auto;
         grid-template-columns: 30rem auto;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
   }
 }
 
@@ -2791,7 +2809,7 @@ h6 {
 .BU-products__row {
   display: -ms-grid;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2804,7 +2822,7 @@ h6 {
 .BU-products__col2 {
   display: -ms-grid;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2831,7 +2849,7 @@ h6 {
   .BU-more-products__row {
     display: -ms-grid;
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     -ms-grid-columns: 30rem auto;
         grid-template-columns: 30rem auto;
   }
@@ -2840,7 +2858,7 @@ h6 {
 .BU-more-products__col2 {
   display: -ms-grid;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
 }
 
 .footer {
@@ -2862,7 +2880,7 @@ h6 {
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
-      grid-template-areas: "left-up" "right" "left-down";
+      grid-template-areas: "left-up" "right" "left-down";
 }
 
 @media screen and (min-width: 992px) {
@@ -2870,7 +2888,7 @@ h6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
     grid-auto-columns: 70% 30%;
-        grid-template-areas: "left-up right" "left-down right";
+        grid-template-areas: "left-up right" "left-down right";
   }
 }
 

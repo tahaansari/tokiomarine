@@ -57,8 +57,8 @@
   position: relative;
   background: url("../images/business-unit-bg.png") no-repeat center/cover;
   color: $white;
-  padding-top: 12.5rem;
-  padding-bottom: 12.5rem;
+  padding-top: 12rem;
+  padding-bottom: 20rem;
   &__content {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -76,7 +76,7 @@
   }
   &__cta {
     position: absolute;
-    bottom: 8rem;
+    bottom: 15rem;
     text-transform: uppercase;
     padding-left: 4rem;
     font-family: $font-alternate3;
@@ -99,6 +99,7 @@
   &__page-anchor {
     position: absolute;
     bottom: 0;
+    max-width: 100%;
     @include gt-md {
       right: 8rem;
     }
@@ -106,8 +107,12 @@
 }
 
 .claim-info {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  @include gt-md {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
   &__btn {
     margin-top: 3rem;
   }
@@ -115,28 +120,31 @@
 
 .product-range {
   background: $gray-tint;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
   @include gt-md {
     padding-top: 7rem;
     padding-bottom: 7rem;
   }
-  &__wrap {
+  &__product-wrap {
     display: grid;
     grid-auto-flow: column;
     overflow-x: scroll;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     padding-bottom: 5rem;
   }
   &__product {
-    width: 51.6rem;
+    width: 31rem;
+    @include gt-md {
+      width: 51.6rem;
+    }
   }
 }
 
 .guides-resources {
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
   @include gt-md {
     padding-top: 5rem;
     padding-bottom: 10rem;
@@ -186,8 +194,8 @@
 
 .group-contacts {
   background: $gray-tint;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
   @include gt-md {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -225,7 +233,7 @@
     @include gt-md {
       display: grid;
       grid-template-columns: 30rem auto;
-      grid-gap: 2rem;
+      grid-gap: 1.5rem;
     }
   }
   &__col2 {
@@ -254,14 +262,14 @@
   }
   &__row {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     @include gt-md {
       grid-template-columns: 30rem auto;
     }
   }
   &__col2 {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     @include gt-md {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -279,12 +287,12 @@
   &__row {
     @include gt-md {
       display: grid;
-      grid-gap: 2rem;
+      grid-gap: 1.5rem;
       grid-template-columns: 30rem auto;
     }
   }
   &__col2 {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
   }
 }
