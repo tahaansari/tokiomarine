@@ -1,25 +1,3 @@
-.page-head {
-  background: $primary-dark;
-  color: $white;
-  padding-top: 2rem;
-  padding-bottom: 7rem;
-  &--transparent {
-    background: transparent;
-    color: $gray;
-  }
-  &__title {
-    margin-top: 8rem;
-    margin-bottom: 3rem;
-    &--primary {
-      color: $primary;
-    }
-  }
-  &__desc {
-    max-width: 80rem;
-    font-size: 2.4rem;
-  }
-}
-
 .business-unit-wrap {
   display: grid;
   grid-gap: 2.5rem;
@@ -121,15 +99,15 @@
   &__page-anchor {
     position: absolute;
     bottom: 0;
-    right: 8rem;
+    @include gt-md {
+      right: 8rem;
+    }
   }
 }
 
 .claim-info {
-  max-width: 80rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  margin-left: 20%;
   &__btn {
     margin-top: 3rem;
   }
@@ -137,8 +115,12 @@
 
 .product-range {
   background: $gray-tint;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include gt-md {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   &__wrap {
     display: grid;
     grid-auto-flow: column;
@@ -153,62 +135,68 @@
 
 .guides-resources {
   position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include gt-md {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    width: 49rem;
-    height: 24rem;
-    background: url("../images/right-wave-bg.png") no-repeat center/contain;
+    @include gt-md {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 49rem;
+      height: 24rem;
+      background: url("../images/right-wave-bg.png") no-repeat center/contain;
+    }
   }
   &__top {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 3rem;
   }
-  &__wrap {
+  &__card-wrap {
     display: grid;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    padding-bottom: 4rem;
-    grid-gap: 2rem;
+    // grid-auto-flow: column;
+    // overflow-x: scroll;
+    // padding-bottom: 4rem;
+    grid-gap: 1.5rem;
   }
   &__card {
-    width: 30rem;
-    // 624
-    &:first-of-type {
-      width: 62.4rem;
-    }
+    // width: 30rem;
+    // &:first-of-type {
+    //   width: 62.4rem;
+    // }
   }
 }
 
 .group-contacts {
   background: $gray-tint;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include gt-md {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   &__heading {
     line-height: 1.2;
     margin-bottom: 2.5rem;
   }
-  &__btn {
-    margin-bottom: 3rem;
-  }
-  &__sub-heading {
-    font-family: $font-secondary;
-    font-size: 2.4rem;
-  }
   &__number {
     position: relative;
     display: block;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     padding-left: 3rem;
     color: $primary;
     text-decoration: underline;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    @include gt-md {
+      font-size: 2.4rem;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -220,6 +208,9 @@
       background: url(../images/sprite.svg) no-repeat -0.8rem -50.2rem;
     }
   }
+  &__btn {
+    margin-bottom: 3rem;
+  }
   &__row {
     @include gt-md {
       display: grid;
@@ -230,21 +221,31 @@
   &__col2 {
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
+    overflow-x: scroll;
+    padding-bottom: 4rem;
   }
   &__contacts {
     width: 30rem;
-    &:first-of-type {
-      width: 62.4rem;
+    @include gt-md {
+      &:first-of-type {
+        width: 62.4rem;
+      }
     }
   }
 }
 
 .BU-products {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  @include gt-md {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+  }
   &__row {
+    display: grid;
+    grid-gap: 2rem;
     @include gt-md {
-      display: grid;
-      grid-gap: 2rem;
       grid-template-columns: 30rem auto;
     }
   }
@@ -260,10 +261,10 @@
 .BU-more-products {
   background-color: $gray-tint;
   padding-top: 5rem;
-  padding-bottom: 7rem;
+  padding-bottom: 5rem;
   @include gt-md {
     padding-top: 10rem;
-    padding-bottom: 12rem;
+    padding-bottom: 10rem;
   }
   &__row {
     @include gt-md {

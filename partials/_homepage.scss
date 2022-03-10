@@ -65,19 +65,28 @@
 }
 
 .featured-story {
-  background: url("../images/featured-story-bg.png") no-repeat center/cover;
-  padding-top: 30rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   @include gt-md {
-    padding-top: 0;
-    padding-bottom: 30rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  &__bg {
+    background: url("../images/featured-story-bg.png") no-repeat center/cover;
+    padding-top: 30rem;
+    @include gt-md {
+      padding-top: 0;
+      padding-bottom: 30rem;
+    }
   }
   &__content {
     background: $white;
-    padding-right: 4rem;
-    padding-bottom: 4rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     max-width: 34rem;
     @include gt-md {
-      max-width: 48rem;
+      max-width: 42rem;
     }
   }
   &__bottom {
