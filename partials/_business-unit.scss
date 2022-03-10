@@ -118,8 +118,8 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   @include gt-md {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
   &__wrap {
     display: grid;
@@ -138,8 +138,8 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   @include gt-md {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
   }
   &::before {
     @include gt-md {
@@ -157,20 +157,30 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    @include gt-md {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
   }
   &__card-wrap {
     display: grid;
-    // grid-auto-flow: column;
-    // overflow-x: scroll;
-    // padding-bottom: 4rem;
     grid-gap: 1.5rem;
+    @include gt-md {
+      grid-auto-flow: column;
+      overflow-x: scroll;
+      padding-bottom: 4rem;
+    }
   }
   &__card {
-    // width: 30rem;
-    // &:first-of-type {
-    //   width: 62.4rem;
-    // }
+    @include gt-md {
+      width: 30rem;
+      &:first-of-type {
+        width: 62.4rem;
+      }
+    }
   }
 }
 
@@ -179,8 +189,8 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   @include gt-md {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
   &__heading {
     line-height: 1.2;
