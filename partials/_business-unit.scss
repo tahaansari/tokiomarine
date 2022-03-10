@@ -1,16 +1,23 @@
-.business-unit-wrap {
-  display: grid;
-  grid-gap: 2.5rem;
+.find-BU {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   @include gt-md {
-    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
   }
-}
-
-.business-unit {
-  border: 1px solid $gray-tint;
-  border-top: 2px solid $primary;
-  padding: 3rem;
-  padding-top: 4rem;
+  &__card-wrap {
+    display: grid;
+    grid-gap: 1.5rem;
+    @include gt-md {
+      grid-template-columns: auto auto;
+    }
+  }
+  &__card {
+    border: 1px solid $gray-tint;
+    border-top: 2px solid $primary;
+    padding: 3rem;
+    padding-top: 4rem;
+  }
   &__address {
     position: relative;
     display: block;
@@ -295,4 +302,7 @@
     display: grid;
     grid-gap: 1.5rem;
   }
+}
+
+.BU-card {
 }

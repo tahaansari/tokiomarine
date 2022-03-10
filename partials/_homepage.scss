@@ -99,16 +99,6 @@
 
 .financial-power {
   position: relative;
-  background: rgb(0, 51, 102);
-  background: linear-gradient(90deg, rgba(0, 51, 102, 1) 29%, rgba(0, 102, 204, 1) 100%);
-  color: #ffffff;
-  padding-left: 4rem;
-  padding-right: 2rem;
-  padding-top: 5rem;
-  padding-bottom: 18rem;
-  @include gt-md {
-    padding: 6rem 18rem 6rem 32.5rem;
-  }
   &:before {
     content: "";
     position: absolute;
@@ -118,9 +108,23 @@
     background: url("../images/mega-menu-bg.svg") no-repeat center/contain;
     bottom: -4rem;
     left: 0;
+    z-index: 1;
     @include gt-md {
       top: 50%;
       transform: translateY(-50%);
+    }
+  }
+  &__content {
+    position: relative;
+    background: rgb(0, 51, 102);
+    background: linear-gradient(90deg, rgba(0, 51, 102, 1) 29%, rgba(0, 102, 204, 1) 100%);
+    color: #ffffff;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 18rem;
+    @include gt-md {
+      padding: 6rem 18rem 6rem 22rem;
     }
   }
   &__table {
@@ -151,11 +155,13 @@
 }
 
 .featured-products {
-  display: grid;
-  grid-auto-flow: column;
-  padding-bottom: 5rem;
-  overflow-x: scroll;
-  grid-gap: 3rem;
+  &__card-wrap {
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 5rem;
+    overflow-x: scroll;
+    grid-gap: 2.5rem;
+  }
 }
 
 .latest-news {
