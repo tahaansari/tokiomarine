@@ -1426,7 +1426,8 @@ h6 {
   padding: 2.4rem;
   display: -ms-grid;
   display: grid;
-  grid-gap: 6rem;
+  grid-gap: 4rem;
+  overflow: hidden;
 }
 
 .card::after {
@@ -1443,18 +1444,13 @@ h6 {
 .card__content {
   position: relative;
   z-index: 1;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 8rem;
+}
+
+.card__title {
+  color: #ffffff;
 }
 
 .card:hover .card__img {
@@ -1499,7 +1495,6 @@ h6 {
 }
 
 .card--featured-article {
-  width: 34.2rem;
   padding: 5rem 2.4rem 3rem;
 }
 
@@ -1605,7 +1600,7 @@ h6 {
   display: inline-block;
   text-transform: uppercase;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .card__bottom {
@@ -2421,6 +2416,18 @@ h6 {
   text-align: right;
 }
 
+.featured-products {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .featured-products {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
 .featured-products__card-wrap {
   display: -ms-grid;
   display: grid;
@@ -2430,13 +2437,38 @@ h6 {
   grid-gap: 2.5rem;
 }
 
-.latest-news {
+.featured-products__card {
+  width: 30rem;
+}
+
+.featured-products__card:first-of-type {
+  width: 62.4rem;
+}
+
+.latest-news__card-wrap {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   padding-bottom: 5rem;
   overflow-x: scroll;
-  grid-gap: 3rem;
+  grid-gap: 1.5rem;
+}
+
+.latest-news__card {
+  width: 30rem;
+}
+
+@media screen and (min-width: 992px) {
+  .latest-news__card {
+    width: 62.4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .latest-news__title {
+    font-size: 4rem;
+    max-width: 37.6rem;
+  }
 }
 
 .explore-careers {

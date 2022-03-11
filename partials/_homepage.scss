@@ -155,6 +155,12 @@
 }
 
 .featured-products {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include gt-md {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
   &__card-wrap {
     display: grid;
     grid-auto-flow: column;
@@ -162,14 +168,34 @@
     overflow-x: scroll;
     grid-gap: 2.5rem;
   }
+  &__card {
+    width: 30rem;
+    &:first-of-type {
+      width: 62.4rem;
+    }
+  }
 }
 
 .latest-news {
-  display: grid;
-  grid-auto-flow: column;
-  padding-bottom: 5rem;
-  overflow-x: scroll;
-  grid-gap: 3rem;
+  &__card-wrap {
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 5rem;
+    overflow-x: scroll;
+    grid-gap: 1.5rem;
+  }
+  &__card {
+    width: 30rem;
+    @include gt-md {
+      width: 62.4rem;
+    }
+  }
+  &__title {
+    @include gt-md {
+      font-size: 4rem;
+      max-width: 37.6rem;
+    }
+  }
 }
 
 .explore-careers {
