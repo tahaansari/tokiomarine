@@ -26,18 +26,18 @@ a {
 }
 
 section {
-  // padding-top: 2rem;
-  // padding-bottom: 2rem;
-  // @include gt-md {
-  //   padding-top: 3rem;
-  //   padding-bottom: 3rem;
-  // }
-  // &:first-of-type {
-  //   padding-top: 0;
-  // }
-  // &:last-of-type {
-  //   padding-bottom: 0;
-  // }
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include gt-md {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &:last-of-type {
+    padding-bottom: 0;
+  }
 }
 
 img {

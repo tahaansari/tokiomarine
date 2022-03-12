@@ -547,6 +547,26 @@ a {
   text-decoration: none;
 }
 
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+section:first-of-type {
+  padding-top: 0;
+}
+
+section:last-of-type {
+  padding-bottom: 0;
+}
+
 img {
   width: 100%;
 }
@@ -2292,18 +2312,6 @@ h6 {
   background: url("../images/sprite.svg") no-repeat -0.8rem -45.6rem;
 }
 
-.featured-story {
-  padding-top: 7rem;
-  padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 992px) {
-  .featured-story {
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-  }
-}
-
 .featured-story__bg {
   background: url("../images/featured-story-bg.png") no-repeat center/cover;
   padding-top: 30rem;
@@ -2389,7 +2397,7 @@ h6 {
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 100%;
-  border-top: 1px solid #afca0b;
+  border-top: 3px solid #afca0b;
 }
 
 .financial-power__row {
@@ -2417,14 +2425,21 @@ h6 {
 }
 
 .featured-products {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  position: relative;
+  margin-left: 9rem;
 }
 
 @media screen and (min-width: 992px) {
-  .featured-products {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .featured-products::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0;
+    width: 49rem;
+    height: 24rem;
+    background: url("../images/right-wave-bg.png") no-repeat center/contain;
   }
 }
 
@@ -2472,26 +2487,21 @@ h6 {
 }
 
 .explore-careers {
-  padding-top: 25rem;
-  padding-bottom: 25rem;
+  padding-top: 15rem;
+  padding-bottom: 17rem;
   background: url("../images/careers.png") no-repeat center/cover;
   color: #ffffff;
 }
 
 .explore-careers__content {
   max-width: 42rem;
-}
-
-.find-BU {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-@media screen and (min-width: 992px) {
-  .find-BU {
-    padding-top: 5rem;
-    padding-bottom: 8rem;
-  }
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  grid-gap: 2rem;
+  justify-items: start;
 }
 
 .find-BU__card-wrap {
@@ -2638,33 +2648,12 @@ h6 {
   }
 }
 
-.claim-info {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
-
-@media screen and (min-width: 992px) {
-  .claim-info {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
-}
-
 .claim-info__btn {
   margin-top: 3rem;
 }
 
 .product-range {
   background: #f0f0f0;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
-
-@media screen and (min-width: 992px) {
-  .product-range {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
 }
 
 .product-range__product-wrap {
@@ -2688,15 +2677,6 @@ h6 {
 
 .guides-resources {
   position: relative;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
-
-@media screen and (min-width: 992px) {
-  .guides-resources {
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -2768,15 +2748,6 @@ h6 {
 
 .group-contacts {
   background: #f0f0f0;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
-
-@media screen and (min-width: 992px) {
-  .group-contacts {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
 }
 
 .group-contacts__heading {
@@ -2845,18 +2816,6 @@ h6 {
   }
 }
 
-.BU-products {
-  padding-top: 2rem;
-  padding-bottom: 6rem;
-}
-
-@media screen and (min-width: 992px) {
-  .BU-products {
-    padding-top: 4rem;
-    padding-bottom: 10rem;
-  }
-}
-
 .BU-products__row {
   display: -ms-grid;
   display: grid;
@@ -2885,15 +2844,6 @@ h6 {
 
 .BU-more-products {
   background-color: #f0f0f0;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-@media screen and (min-width: 992px) {
-  .BU-more-products {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
 }
 
 @media screen and (min-width: 992px) {
