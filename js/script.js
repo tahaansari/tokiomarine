@@ -114,3 +114,9 @@ document.querySelectorAll(".header__back").forEach((item) => {
     document.querySelector(".header__mega-menu--open").classList.remove("header__mega-menu--open");
   });
 });
+
+if (screen.width >= 1440) {
+  document.querySelectorAll(".custom-container").forEach((element) => {
+    element.style.paddingLeft = (screen.width - 1302) / 2 + "px";
+  });
+}

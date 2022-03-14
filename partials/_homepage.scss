@@ -150,7 +150,6 @@
 
 .featured-products {
   position: relative;
-  margin-left: 9rem;
   &::before {
     @include gt-md {
       content: "";

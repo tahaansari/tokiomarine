@@ -35,9 +35,9 @@ section {
   &:first-of-type {
     padding-top: 0;
   }
-  &:last-of-type {
-    padding-bottom: 0;
-  }
+  // &:last-of-type {
+  //   padding-bottom: 0;
+  // }
 }
 
 img {
@@ -107,4 +107,8 @@ h6 {
 }
 ::-webkit-scrollbar-thumb {
   background-color: $primary-alternate-dark;
+}
+
+.custom-container {
+  padding-left: 1.5rem;
 }
