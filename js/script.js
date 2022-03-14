@@ -115,8 +115,8 @@ document.querySelectorAll(".header__back").forEach((item) => {
   });
 });
 
-if (screen.width >= 1440) {
-  document.querySelectorAll(".custom-container").forEach((element) => {
-    element.style.paddingLeft = (screen.width - 1302) / 2 + "px";
-  });
-}
+// if (screen.width >= 1440) {
+//   document.querySelectorAll(".custom-container").forEach((element) => {
+//     element.style.paddingLeft = (screen.width - 1302) / 2 + "px";
+//   });
+// }

@@ -92,12 +92,14 @@ h6 {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   @include gt-xl {
-    width: 130.2rem;
+    padding-right: 8.5rem;
+    padding-left: 8.5rem;
+    // width: 130.2rem;
   }
 }
 
@@ -111,4 +113,8 @@ h6 {
 
 .custom-container {
   padding-left: 1.5rem;
+  @include gt-xl {
+    padding-left: 8.5rem;
+    // width: 130.2rem;
+  }
 }
