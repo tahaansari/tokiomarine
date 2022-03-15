@@ -849,9 +849,15 @@ h6 {
 
 .page-head {
   background: #003366;
-  color: #ffffff;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .page-head {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .page-head--transparent {
@@ -861,6 +867,7 @@ h6 {
 
 .page-head__title {
   margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .page-head__title--primary {
@@ -868,6 +875,7 @@ h6 {
 }
 
 .page-head__desc {
+  color: #ffffff;
   display: inline-block;
   max-width: 80rem;
   font-size: 1.8rem;
@@ -884,12 +892,14 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 6rem;
   font-size: 1.2rem;
+  color: #ffffff;
+  padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 992px) {
   .breadcrum {
+    padding-bottom: 6rem;
     font-size: 1.6rem;
   }
 }
@@ -2868,6 +2878,52 @@ h6 {
   grid-gap: 1.5rem;
 }
 
+.pc-head__title {
+  color: #ffffff;
+  font-size: 4.8rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .pc-head__title {
+    font-size: 6.4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.pc-head__desc {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 992px) {
+  .pc-head__desc {
+    font-size: 2.4rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.pc-head__select-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-gap: 4rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pc-head__select {
+  background-color: #ffffff;
+  font-size: 2.4rem;
+  width: 30rem;
+}
+
 .footer {
   position: relative;
 }
@@ -2887,7 +2943,7 @@ h6 {
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
-      grid-template-areas: "left-up" "right" "left-down";
+      grid-template-areas: "left-up" "right" "left-down";
 }
 
 @media screen and (min-width: 992px) {
@@ -2895,7 +2951,7 @@ h6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
     grid-auto-columns: 70% 30%;
-        grid-template-areas: "left-up right" "left-down right";
+        grid-template-areas: "left-up right" "left-down right";
   }
 }
 

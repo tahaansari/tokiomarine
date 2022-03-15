@@ -115,20 +115,25 @@
 
 .page-head {
   background: $primary-dark;
-  color: $white;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
+  @include gt-md {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
   &--transparent {
     background: transparent;
     color: $gray;
   }
   &__title {
     margin-bottom: 2rem;
+    color: $white;
     &--primary {
       color: $primary;
     }
   }
   &__desc {
+    color: $white;
     display: inline-block;
     max-width: 80rem;
     font-size: 1.8rem;
@@ -141,9 +146,11 @@
 
 .breadcrum {
   display: flex;
-  padding-bottom: 6rem;
   font-size: 1.2rem;
+  color: $white;
+  padding-bottom: 4rem;
   @include gt-md {
+    padding-bottom: 6rem;
     font-size: 1.6rem;
   }
   &__item {
