@@ -19,14 +19,35 @@
   }
   &__select-box {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 4rem;
-    justify-content: start;
+    grid-gap: 2rem;
     align-items: center;
+    grid-template-columns: 30rem 6rem;
+    // @include gt-md {
+    //   grid-template-columns: auto auto;
+    // }
   }
   &__select {
     background-color: $white;
-    font-size: 2.4rem;
-    width: 30rem;
+    font-size: 1.8rem;
+    @include gt-md {
+      font-size: 2.4rem;
+    }
+    .select-selected {
+      padding-top: 1.3rem;
+      padding-bottom: 1.3rem;
+    }
+  }
+}
+
+.pc-body {
+  &__product-wrap {
+    display: grid;
+    grid-gap: 2.5rem;
+  }
+  &__product {
+    display: grid;
+    @include gt-md {
+      grid-template-columns: 32rem auto;
+    }
   }
 }

@@ -561,10 +561,10 @@
 .custom-select {
   position: relative;
   border: 1px solid $gray-tint;
-  width: 19rem;
-  @include gt-md {
-    width: 24rem;
-  }
+  // width: 20rem;
+  // @include gt-md {
+  //   width: 30rem;
+  // }
   &:after {
     content: "";
     position: absolute;
@@ -877,22 +877,27 @@
 }
 
 .product {
-  &--horizontal {
-    @include gt-md {
-      display: grid;
-      grid-template-columns: 40% auto;
-    }
-  }
+  // &--horizontal-small {
+  //   @include gt-md {
+  //     display: grid;
+  //     grid-template-columns: 32rem auto;
+  //   }
+  // }
+  // &--horizontal-medium {
+  //   @include gt-md {
+  //     display: grid;
+  //     grid-template-columns: 43rem auto;
+  //   }
+  // }
   &__thumbnail {
     display: block;
-    // @include gt-md {
-    //   height: 100%;
-    //   object-fit: cover;
-    // }
   }
   &__content {
-    padding: 4rem 2rem;
+    padding: 4.5rem 3.5rem;
     background: $white;
+    &--primary-tint-dark {
+      background: $primary-tint-dark;
+    }
   }
   &__bottom {
     margin-top: 3rem;
